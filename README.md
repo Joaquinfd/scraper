@@ -74,7 +74,7 @@ Application → Cookies). Sin región, obtienes el catálogo y precios base del
 
 ## Alternativa con Scrapy
 
-Si prefieres el framework completo (concurrencia, autothrottle y export gestionados
+Framework completo en caso de falla uso principal (concurrencia, autothrottle y export gestionados
 por Scrapy):
 
 ```bash
@@ -82,19 +82,17 @@ pip install scrapy
 scrapy runspider scrapy_alt/jumbo_spider.py -O productos.csv
 ```
 
-## Cuándo necesitarías un navegador headless
+## Navegador headless
 
-No para este sitio: la API VTEX no requiere JS. Pero si en el futuro quisieras
+La API VTEX no requiere JS. Para
 datos que solo aparecen renderizados (reseñas dinámicas, widgets), Playwright o
 Selenium serían el camino. Quedan comentados en `requirements.txt`.
 
 ## Buenas prácticas y consideraciones legales
 
-- Revisa `https://www.jumbo.cl/robots.txt` y los Términos de Servicio del sitio
-  antes de ejecutar a gran escala. Este código es para fines legítimos como
-  investigación de mercado o monitoreo de precios.
+- Este código es para uso en proyecto universitario de formación académica.
 - El scraper incluye **pausas con jitter, reintentos con backoff** y respeta
-  códigos 429/5xx. Mantén `--workers` bajo y los delays razonables para no
+  códigos 429/5xx. Mantiene `--workers` bajo y los delays razonables para no
   sobrecargar el servidor.
 - Los datos de catálogo pueden estar sujetos a derechos del titular: úsalos de
   forma responsable y conforme a la normativa aplicable.

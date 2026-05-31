@@ -28,6 +28,7 @@ _UNIT_MAP: dict[str, MeasurementUnit] = {
     "und": MeasurementUnit.UN,
 }
 
+_COMMIT_EVERY = 500
 _ERROR_FIELDS = ["skuId", "productName", "categoryPath", "price", "error"]
 _CATEGORY_FIELDS = ["category_path", "last_segment", "measurement_unit"]
 
@@ -66,9 +67,10 @@ def _upsert_store(session: Session, name: str, company: str, location: str | Non
 class DbStorage:
     """Writes product types, products, and price snapshots directly to PostgreSQL.
 
+    Uses a single session for the entire run and commits every _COMMIT_EVERY rows.
     On exit writes two files to output_dir:
       - failed_rows.csv  — rows that could not be written and why
-      - categories.csv   — all unique category paths found (use to filter food categories)
+      - categories.csv   — all unique category paths found
     """
 
     def __init__(
@@ -84,6 +86,8 @@ class DbStorage:
         self.store_location = store_location
         self._output_dir = output_dir
         self._store_id: int | None = None
+        self._session: Session | None = None
+        self._pending = 0
         self.rows_written = 0
         self.rows_skipped = 0
         self._categories: dict[str, str] = {}
@@ -99,9 +103,9 @@ class DbStorage:
         )
         self._error_writer.writeheader()
 
-        with Session(self.engine) as session:
-            store = _upsert_store(session, self.store_name, self.store_company, self.store_location)
-            self._store_id = store.id
+        self._session = Session(self.engine)
+        store = _upsert_store(self._session, self.store_name, self.store_company, self.store_location)
+        self._store_id = store.id
         logger.info("Store '%s' (id=%d) listo.", self.store_name, self._store_id)
         return self
 
@@ -129,35 +133,42 @@ class DbStorage:
         unit = _normalize_unit(row.get("measurementUnit"))
 
         try:
-            with Session(self.engine) as session:
-                pt = session.exec(
+            with self._session.begin_nested():
+                pt = self._session.exec(
                     select(ProductType).where(ProductType.name == type_name)
                 ).first()
                 if not pt:
                     pt = ProductType(name=type_name, measurement_unit=unit)
-                    session.add(pt)
-                    session.commit()
-                    session.refresh(pt)
+                    self._session.add(pt)
+                    self._session.flush()
 
-                if session.get(Product, sku) is None:
-                    session.add(Product(
+                if self._session.get(Product, sku) is None:
+                    self._session.add(Product(
                         sku=sku,
                         name=name,
                         brand=brand,
                         unit_amount=unit_amount,
                         product_type_id=pt.id,
+                        image_url=row.get("imageUrl") or None,
+                        product_url=row.get("productUrl") or None,
                     ))
-                    session.commit()
+                    self._session.flush()
 
-                session.add(PriceSnapshot(
+                self._session.add(PriceSnapshot(
                     price=round(float(price_raw)),
                     product_sku=sku,
                     store_id=self._store_id,
                 ))
-                session.commit()
-                self.rows_written += 1
+
+            self.rows_written += 1
+            self._pending += 1
+            if self._pending >= _COMMIT_EVERY:
+                self._session.commit()
+                self._pending = 0
+                logger.debug("Commit parcial: %d filas escritas.", self.rows_written)
+
         except Exception as exc:
-            logger.error("Error guardando SKU %s: %s", sku, exc)
+            logger.error("Error en SKU %s: %s", sku, exc)
             self._log_error(row, str(exc))
             self.rows_skipped += 1
 
@@ -173,6 +184,11 @@ class DbStorage:
             self._error_file.flush()
 
     def __exit__(self, *exc) -> None:
+        if self._session:
+            if self._pending:
+                self._session.commit()
+            self._session.close()
+
         cat_path = os.path.join(self._output_dir, "categories.csv")
         with open(cat_path, "w", newline="", encoding="utf-8-sig") as f:
             writer = csv.DictWriter(f, fieldnames=_CATEGORY_FIELDS)
@@ -184,9 +200,7 @@ class DbStorage:
                     "last_segment": segments[-1] if segments else "",
                     "measurement_unit": unit,
                 })
-        logger.info(
-            "Categorías únicas: %d → %s", len(self._categories), cat_path
-        )
+        logger.info("Categorías únicas: %d → %s", len(self._categories), cat_path)
 
         if self._error_file:
             self._error_file.close()
