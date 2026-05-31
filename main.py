@@ -4,7 +4,8 @@
 Ejemplos:
     python main.py                          # scrapea todo, salida en ./output
     python main.py --workers 3 --out data   # 3 categorías en paralelo
-    python main.py --delay-min 0.8 --delay-max 1.5   # más cortés / lento
+    python main.py --db                     # además escribe en PostgreSQL (requiere DATABASE_URL)
+    python main.py --db --no-csv --no-jsonl # solo DB, sin archivos
 """
 
 from __future__ import annotations
@@ -24,6 +25,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--delay-max", type=float, default=0.9, help="Pausa máxima entre requests (s)")
     p.add_argument("--no-csv", action="store_true", help="No escribir CSV")
     p.add_argument("--no-jsonl", action="store_true", help="No escribir JSONL")
+    p.add_argument("--db", action="store_true", help="Escribir price snapshots en PostgreSQL (requiere DATABASE_URL en .env)")
+    p.add_argument("--store-name", default="Jumbo Online", help="Nombre de la tienda en DB (default: 'Jumbo Online')")
+    p.add_argument("--store-location", default=None, help="Ubicación de la tienda en DB (opcional)")
     p.add_argument("--verbose", "-v", action="store_true", help="Logging detallado")
     return p
 
@@ -44,18 +48,21 @@ def main(argv=None) -> int:
         output_dir=args.out,
         write_csv=not args.no_csv,
         write_jsonl=not args.no_jsonl,
+        write_db=args.db,
+        store_name=args.store_name,
+        store_location=args.store_location,
     )
 
     scraper = JumboScraper(config)
     try:
-        rows = scraper.run()
+        total = scraper.run()
     except KeyboardInterrupt:
         logging.warning("Interrumpido por el usuario. Los datos parciales quedaron guardados.")
         return 130
     finally:
         scraper.close()
 
-    print(f"\nFilas escritas: {rows}  ->  {config.output_dir}/")
+    print(f"\nProductos únicos procesados: {total}")
     return 0
 
 

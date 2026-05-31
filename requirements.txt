@@ -2,6 +2,11 @@
 requests>=2.31
 tenacity>=8.2
 
+# --- Base de datos ---
+sqlmodel>=0.0.38
+psycopg>=3.3.4
+python-dotenv>=1.0.0
+
 # --- Análisis / export opcional ---
 pandas>=2.0          # export a Parquet/Excel y análisis posterior
 pyarrow>=14.0        # backend parquet para pandas
