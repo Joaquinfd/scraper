@@ -11,7 +11,7 @@ python-dotenv>=1.0.0
 pandas>=2.0          # export a Parquet/Excel y análisis posterior
 pyarrow>=14.0        # backend parquet para pandas
 
-# --- Alternativas de scraping "pesado" (solo si necesitas HTML/JS) ---
+# --- Alternativas de scraping "pesado" (HTML/JS) ---
 # scrapy>=2.11        # framework completo de crawling (ver scrapy_alt/)
 # playwright>=1.40    # navegador headless para páginas que exijan JS
 #   tras instalar playwright:  playwright install chromium

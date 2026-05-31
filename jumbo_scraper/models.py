@@ -33,6 +33,8 @@ class Product(SQLModel, table=True):
     brand: str = Field(max_length=40)
     unit_amount: float
     product_type_id: uuid.UUID = Field(foreign_key="producttype.id")
+    image_url: str | None = Field(default=None)
+    product_url: str | None = Field(default=None)
 
 
 class Store(SQLModel, table=True):
