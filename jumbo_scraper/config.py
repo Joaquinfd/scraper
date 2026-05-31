@@ -27,10 +27,16 @@ class Config:
         "Chrome/124.0.0.0 Safari/537.36"
     )
 
-    # --- Salida ---
+    # --- Salida archivos ---
     output_dir: str = "output"
     write_csv: bool = True
     write_jsonl: bool = True
+
+    # --- Salida base de datos ---
+    write_db: bool = False
+    store_name: str = "Jumbo Online"
+    store_company: str = "Jumbo"
+    store_location: str | None = None
 
     @property
     def browse_url(self) -> str:
