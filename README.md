@@ -1,116 +1,140 @@
 # Scraper de catálogo — jumbo.cl
 
-Base de código en Python para extraer **todo el catálogo de productos** de
-jumbo.cl. El sitio corre sobre **VTEX** (Cencosud), así que en lugar de renderizar
-HTML/JavaScript, el scraper consume la **API pública de catálogo de VTEX**, que
-devuelve JSON estructurado (producto, SKU, precio, stock, imágenes). Es más
-rápido, más estable y mucho menos frágil que parsear HTML.
+Microservicio en Python que extrae el catálogo completo de productos de jumbo.cl y escribe los datos directamente en una base de datos PostgreSQL compartida con el backend.
 
-## Estrategia
+## Cómo funciona
 
-1. **Árbol de categorías** → `GET /api/catalog_system/pub/category/tree/50`
-2. Se recorre cada **categoría hoja** y se paginan sus productos vía
-   `GET /api/catalog_system/pub/products/search?fq=C:/<id>/&_from=&_to=&sc=1`
-   - VTEX entrega máximo **50 items por request** y tiene un **tope de offset (~2500)**
-     por consulta. Por eso se baja a nivel de hoja: cada hoja suele caber bajo el tope.
-   - Si una hoja igual lo supera, el scraper **subdivide por marca** automáticamente.
-3. **Deduplicación** por `productId` (un producto puede estar en varias categorías).
-4. Escritura **incremental** a `CSV` + `JSONL` (no acumula todo en RAM → sirve para
-   catálogos de cientos de miles de SKUs).
+El scraper consume la **API pública de Constructor.io** que usa jumbo.cl como motor de búsqueda y catálogo. Devuelve JSON estructurado (producto, SKU, precio, stock, imágenes) sin necesidad de renderizar HTML o JavaScript.
+
+1. Obtiene el árbol de categorías vía `GET /browse/groups`
+2. Recorre cada **categoría hoja** y pagina sus productos vía `GET /browse/group_id/{id}`
+3. Deduplica por `skuId` (un SKU puede aparecer en varias categorías)
+4. Escribe **incrementalmente** a CSV/JSONL y/o directamente a PostgreSQL
+
+## Requisitos
+
+- Python 3.12+
+- Acceso a la base de datos PostgreSQL del proyecto (ver variables de entorno)
 
 ## Instalación
 
 ```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+python -m venv .venv
+
+# Windows
+.venv\Scripts\Activate.ps1
+
+# macOS / Linux
+source .venv/bin/activate
+
 pip install -r requirements.txt
 ```
+
+## Variables de entorno
+
+Crea un archivo `.env` en la raíz del proyecto:
+
+```env
+DATABASE_URL=postgresql+psycopg://user:password@host:5432/dbname
+```
+
+Formatos aceptados:
+
+- `postgresql+psycopg://...` (recomendado, psycopg v3)
+- `postgresql://...`
+- `postgres://...`
+
+> La `DATABASE_URL` debe apuntar a la misma instancia PostgreSQL que usa el backend.
 
 ## Uso
 
 ```bash
-# Scrapea todo el catálogo -> ./output/jumbo_productos.csv y .jsonl
+# Solo base de datos (recomendado)
+python main.py --db --no-csv --no-jsonl
+
+# Base de datos con logging detallado
+python main.py --db --no-csv --no-jsonl --verbose
+
+# Base de datos + archivos CSV y JSONL
+python main.py --db
+
+# Solo archivos locales (sin DB)
 python main.py
 
-# Más rápido (3 categorías en paralelo). Úsalo con criterio.
-python main.py --workers 3 --out data
-
-# Más cortés / lento
-python main.py --delay-min 0.8 --delay-max 1.5
-
-# Precios/stock por región (ver más abajo)
-python main.py --region "<valor_de_cookie_vtex_segment>"
+# Opciones avanzadas
+python main.py --db --workers 3          # 3 categorías en paralelo
+python main.py --db --delay-min 0.8      # más pausado
+python main.py --db --store-name "Jumbo Las Condes" --store-location "Las Condes"
 ```
 
-Como librería:
+### Todas las opciones
 
-```python
-from jumbo_scraper import Config, JumboScraper
+| Flag | Default | Descripción |
+| --- | --- | --- |
+| `--db` | off | Escribe en PostgreSQL |
+| `--no-csv` | off | No genera CSV |
+| `--no-jsonl` | off | No genera JSONL |
+| `--out DIR` | `output` | Directorio de salida para archivos |
+| `--workers N` | 1 | Categorías en paralelo |
+| `--delay-min F` | 0.4 | Pausa mínima entre requests (s) |
+| `--delay-max F` | 0.9 | Pausa máxima entre requests (s) |
+| `--store-name` | `Jumbo Online` | Nombre de la tienda en DB |
+| `--store-location` | `null` | Ubicación de la tienda en DB |
+| `--verbose / -v` | off | Logging detallado |
 
-scraper = JumboScraper(Config(workers=2, output_dir="data"))
-scraper.run()
-scraper.close()
-```
+## Qué escribe en la base de datos
 
-## Salida
+Por cada producto encontrado (en orden):
 
-Una fila **por SKU** con columnas: `productId, productName, brand, categoryPath,
-skuId, ean, price, listPrice, available, availableQuantity, sellerName, imageUrl,
-productUrl, scrapedAt`, entre otras.
+1. **`producttype`** — upsert por nombre (último segmento del `categoryPath`)
+2. **`product`** — upsert por `skuId`; no sobreescribe si ya existe
+3. **`store`** — upsert por nombre de tienda
+4. **`pricesnapshot`** — inserta siempre con timestamp UTC
 
-- `jumbo_productos.csv`  — abre directo en Excel (UTF-8 BOM).
-- `jumbo_productos.jsonl` — un JSON por línea, ideal para procesar con pandas:
-  ```python
-  import pandas as pd
-  df = pd.read_json("output/jumbo_productos.jsonl", lines=True)
-  ```
+> Los productos ya existentes en la DB no se sobreescriben. Ejecutar el scraper varias veces solo agrega nuevos `pricesnapshots`.
 
-## Regionalización (precios y stock)
+## Archivos de salida
 
-En VTEX el precio/stock puede variar por región. El parámetro `--region` setea la
-cookie `vtex_segment`. Para obtener ese valor: abre jumbo.cl, elige tu comuna,
-y copia la cookie `vtex_segment` desde las DevTools del navegador (pestaña
-Application → Cookies). Sin región, obtienes el catálogo y precios base del
-`sales channel` por defecto.
+Tras cada ejecución con `--db` se generan en `output/`:
 
-## Alternativa con Scrapy
+| Archivo | Contenido |
+| --- | --- |
+| `categories.csv` | Todas las categorías encontradas con su unidad de medida — útil para filtrar categorías de alimentos |
+| `failed_rows.csv` | Filas que no pudieron escribirse en DB y el motivo del error |
+| `jumbo_productos.csv` | Catálogo completo (si `--no-csv` no está activo) |
+| `jumbo_productos.jsonl` | Ídem en formato JSONL para pandas |
 
-Framework completo en caso de falla uso principal (concurrencia, autothrottle y export gestionados
-por Scrapy):
+## Ejecución automática
 
-```bash
-pip install scrapy
-scrapy runspider scrapy_alt/jumbo_spider.py -O productos.csv
-```
+El scraper se ejecuta diariamente a las **8:00 AM hora Santiago** vía GitHub Actions (`.github/workflows/scraper.yml`). Requiere el secret `DATABASE_URL` configurado en el repositorio.
 
-## Navegador headless
-
-La API VTEX no requiere JS. Para
-datos que solo aparecen renderizados (reseñas dinámicas, widgets), Playwright o
-Selenium serían el camino. Quedan comentados en `requirements.txt`.
-
-## Buenas prácticas y consideraciones legales
-
-- Este código es para uso en proyecto universitario de formación académica.
-- El scraper incluye **pausas con jitter, reintentos con backoff** y respeta
-  códigos 429/5xx. Mantiene `--workers` bajo y los delays razonables para no
-  sobrecargar el servidor.
-- Los datos de catálogo pueden estar sujetos a derechos del titular: úsalos de
-  forma responsable y conforme a la normativa aplicable.
+Para ejecutar manualmente desde GitHub: **Actions → Daily scraper → Run workflow**.
 
 ## Estructura
 
 ```
-jumbo_scraper_project/
-├── main.py                  # CLI
+scraper/
+├── main.py                  # CLI entry point
 ├── requirements.txt
-├── jumbo_scraper/
-│   ├── config.py            # parámetros (URLs, delays, paginación)
-│   ├── client.py            # sesión HTTP + reintentos + rate-limit
-│   ├── categories.py        # árbol de categorías y aplanado a hojas
-│   ├── products.py          # paginación por categoría (+ subdivisión por marca)
-│   ├── parser.py            # JSON VTEX -> filas planas (una por SKU)
-│   ├── storage.py           # escritura incremental CSV / JSONL
-│   └── scraper.py           # orquestador + deduplicación
-└── scrapy_alt/
-    └── jumbo_spider.py      # alternativa con Scrapy
+├── .env                     # variables de entorno (no commitear)
+├── .github/
+│   └── workflows/
+│       └── scraper.yml      # GitHub Actions — ejecución diaria
+└── jumbo_scraper/
+    ├── config.py            # parámetros (URLs, delays, paginación, DB)
+    ├── client.py            # sesión HTTP con reintentos y rate-limiting
+    ├── categories.py        # árbol de categorías y aplanado a hojas
+    ├── products.py          # paginación por categoría
+    ├── parser.py            # JSON Constructor.io → filas planas (una por SKU)
+    ├── storage.py           # escritura incremental a CSV / JSONL
+    ├── models.py            # SQLModel table classes (espejo del schema del backend)
+    ├── db.py                # DbStorage — escribe en PostgreSQL con batch commits
+    └── scraper.py           # orquestador + deduplicación
 ```
+
+## Buenas prácticas
+
+- El scraper incluye pausas con jitter, reintentos con backoff exponencial y respeta códigos 429/5xx.
+- Cada lote de 500 filas se confirma en un solo `COMMIT` para minimizar round trips a la DB.
+- Fallos individuales usan savepoints para no afectar el lote en curso.
+- Este código es para uso en proyecto universitario de formación académica.
