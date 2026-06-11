@@ -36,6 +36,24 @@ class Product(SQLModel, table=True):
     image_url: str | None = Field(default=None)
     product_url: str | None = Field(default=None)
 
+    # --- v2: detalle de producto (nombres = atributos Jumbo en snake_case) ---
+    ean: str | None = Field(default=None, max_length=14)
+    ean_checked_at: datetime | None = Field(default=None)
+    # Contenido real del SKU: unidad base normalizada y total en esa unidad
+    # (ej: una lata de 470 cc -> 'l' / 0.47; un pack 24x330 cc -> 'l' / 7.92)
+    measurement_unit_un: str | None = Field(default=None, max_length=5)
+    unit_multiplier_un: float | None = Field(default=None)
+    envase: str | None = Field(default=None, max_length=50)
+    tipo_de_producto: str | None = Field(default=None, max_length=100)
+    origen: str | None = Field(default=None, max_length=30)
+    pais_de_origen: str | None = Field(default=None, max_length=60)
+    id_grupo: str | None = Field(default=None, max_length=20)
+    id_subrubro: str | None = Field(default=None, max_length=20)
+    category_path: str | None = Field(default=None, max_length=255)
+    # ref_id Jumbo: sufijo '-PAK' identifica packs
+    ref_id: str | None = Field(default=None, max_length=50)
+    cart_limit: int | None = Field(default=None)
+
 
 class Store(SQLModel, table=True):
     __tablename__ = "store"

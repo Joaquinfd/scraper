@@ -1,0 +1,5259 @@
+{
+  "response": {
+    "result_sources": {
+      "token_match": {
+        "count": 402
+      },
+      "embeddings_match": {
+        "count": 0
+      }
+    },
+    "facets": [
+      {
+        "display_name": "Marcas",
+        "name": "BrandName",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 14,
+            "display_name": "Stella Artois",
+            "value": "Stella Artois",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 18,
+            "display_name": "Kunstmann",
+            "value": "Kunstmann",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 17,
+            "display_name": "Heineken",
+            "value": "Heineken",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 26,
+            "display_name": "Austral",
+            "value": "Austral",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 9,
+            "display_name": "Corona",
+            "value": "Corona",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Budweiser",
+            "value": "Budweiser",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Sol",
+            "value": "Sol",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Coors",
+            "value": "Coors",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 20,
+            "display_name": "Royal Guard",
+            "value": "Royal Guard",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Quilmes",
+            "value": "Quilmes",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 8,
+            "display_name": "Stones",
+            "value": "Stones",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "D'olbek",
+            "value": "D'olbek",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 18,
+            "display_name": "Cusqueña",
+            "value": "Cusqueña",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Peroni",
+            "value": "Peroni",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tamango",
+            "value": "Tamango",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Modelo",
+            "value": "Modelo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Flensburger",
+            "value": "Flensburger",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Royal Dutch",
+            "value": "Royal Dutch",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Michelob",
+            "value": "Michelob",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Miller",
+            "value": "Miller",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 14,
+            "display_name": "Escudo",
+            "value": "Escudo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Estrella Galicia",
+            "value": "Estrella Galicia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 11,
+            "display_name": "Kross",
+            "value": "Kross",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 12,
+            "display_name": "Becker",
+            "value": "Becker",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Canada Dry",
+            "value": "Canada Dry",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Morenita",
+            "value": "Morenita",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 13,
+            "display_name": "Mahou",
+            "value": "Mahou",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Schweppes",
+            "value": "Schweppes",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Damm",
+            "value": "Damm",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 7,
+            "display_name": "Mestra",
+            "value": "Mestra",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Alhambra",
+            "value": "Alhambra",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Tübinger",
+            "value": "Tübinger",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Guayacán",
+            "value": "Guayacán",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "B-Mix",
+            "value": "B-Mix",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 11,
+            "display_name": "Cristal",
+            "value": "Cristal",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 13,
+            "display_name": "Volcanes del Sur",
+            "value": "Volcanes del Sur",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Asahi",
+            "value": "Asahi",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Báltica",
+            "value": "Báltica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Guinness",
+            "value": "Guinness",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Leyendas de Origen",
+            "value": "Leyendas de Origen",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Paulaner",
+            "value": "Paulaner",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Liefmans",
+            "value": "Liefmans",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 8,
+            "display_name": "Mr. Perkins",
+            "value": "Mr. Perkins",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Corteza Jesuita",
+            "value": "Corteza Jesuita",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Britvic",
+            "value": "Britvic",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 12,
+            "display_name": "Thomas",
+            "value": "Thomas",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Imperdibile",
+            "value": "Imperdibile",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "San Pellegrino",
+            "value": "San Pellegrino",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Fentimans",
+            "value": "Fentimans",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Fever Tree",
+            "value": "Fever Tree",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 7,
+            "display_name": "Kilómetro 24.7",
+            "value": "Kilómetro 24.7",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Salzburg",
+            "value": "Salzburg",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Pilsen del Sur",
+            "value": "Pilsen del Sur",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Landvik",
+            "value": "Landvik",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "La Montaña",
+            "value": "La Montaña",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Imperial",
+            "value": "Imperial",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Grolsch",
+            "value": "Grolsch",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Goose Island",
+            "value": "Goose Island",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Del Puerto",
+            "value": "Del Puerto",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Blue Moon",
+            "value": "Blue Moon",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tecate",
+            "value": "Tecate",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Singha",
+            "value": "Singha",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Sierra Nevada",
+            "value": "Sierra Nevada",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Puerto Sur",
+            "value": "Puerto Sur",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Promo Spid",
+            "value": "Promo Spid",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Moosehead",
+            "value": "Moosehead",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Leffe",
+            "value": "Leffe",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Jahuel",
+            "value": "Jahuel",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Hoegaarden",
+            "value": "Hoegaarden",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ferver Tree",
+            "value": "Ferver Tree",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Edelweiss",
+            "value": "Edelweiss",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Duff",
+            "value": "Duff",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dorada",
+            "value": "Dorada",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Darguner",
+            "value": "Darguner",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Carlsberg",
+            "value": "Carlsberg",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Bud Light",
+            "value": "Bud Light",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Brewdog",
+            "value": "Brewdog",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Blanc",
+            "value": "Blanc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Beck's",
+            "value": "Beck's",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Argos",
+            "value": "Argos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Andes Plateau",
+            "value": "Andes Plateau",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Anchor",
+            "value": "Anchor",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Cantidad",
+        "name": "Cantidad",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "3 Unidades",
+            "value": "3",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 113,
+            "display_name": "4 Unidades",
+            "value": "4",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 160,
+            "display_name": "6 Unidades",
+            "value": "6",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 26,
+            "display_name": "24 Unidades",
+            "value": "24",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "1 Unidad",
+            "value": "1 un.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 9,
+            "display_name": "10 Unidades",
+            "value": "10 un.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 42,
+            "display_name": "12 Unidades",
+            "value": "12 colores",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "15 Unidades",
+            "value": "15 colgadores",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 13,
+            "display_name": "18 Unidades",
+            "value": "18 collets",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "5 Unidades",
+            "value": "5 Piezas",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Pack Unitario",
+        "name": "Pack-Unitario",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 375,
+            "display_name": "Pack",
+            "value": "[\"Pack\"]",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Unitario",
+            "value": "[\"Unitario\"]",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Envase",
+        "name": "Envase",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 229,
+            "display_name": "Botella",
+            "value": "Botella",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Botella de vidrio",
+            "value": "Botella de vidrio",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Caja",
+            "value": "Caja",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 147,
+            "display_name": "Lata",
+            "value": "Lata",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Pack",
+            "value": "Pack",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Tipo de Producto",
+        "name": "Tipo de Producto",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 155,
+            "display_name": "Cervezas Tradicionales",
+            "value": "Cervezas Tradicionales",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 90,
+            "display_name": "Cervezas Artesanales",
+            "value": "Cervezas Artesanales",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 73,
+            "display_name": "Cervezas Premium",
+            "value": "Cervezas Premium",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 22,
+            "display_name": "Cervezas Sin Alcohol",
+            "value": "Cervezas Sin Alcohol",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 15,
+            "display_name": "Ginger Beer",
+            "value": "Ginger Beer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 42,
+            "display_name": "Aguas Tónicas",
+            "value": "Aguas Tónicas",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Bebidas Gaseosas",
+            "value": "Bebidas Gaseosas",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Velas de Cumpleaños",
+            "value": "Velas de Cumpleaños",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Bebidas Gaseosas Zero",
+            "value": "Bebidas Gaseosas Zero",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Precio",
+        "name": "sellingPrice",
+        "data": {},
+        "type": "range",
+        "hidden": false,
+        "status": {},
+        "min": 1290,
+        "max": 36990
+      },
+      {
+        "display_name": "Contenido",
+        "name": "Contenido",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "200 a 355 cc",
+            "value": "200 a 355 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 19,
+            "display_name": "200 ml",
+            "value": "200 ml",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "207 cc",
+            "value": "207 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "220 ml",
+            "value": "220 ml",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 8,
+            "display_name": "250 cc",
+            "value": "250 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "269 cc",
+            "value": "269 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "300 cc",
+            "value": "300 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "310 ml",
+            "value": "310 ml",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 147,
+            "display_name": "330 cc",
+            "value": "330 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "333 cc",
+            "value": "333 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 61,
+            "display_name": "350 cc",
+            "value": "350 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "350 ml",
+            "value": "350 ml",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 23,
+            "display_name": "354 cc",
+            "value": "354 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 46,
+            "display_name": "355 cc",
+            "value": "355 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "440 cc",
+            "value": "440 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "450 cc",
+            "value": "450 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 24,
+            "display_name": "470 cc",
+            "value": "470 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 16,
+            "display_name": "473 cc",
+            "value": "473 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "500 cc",
+            "value": "500 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "6 unidades",
+            "value": "6 unidades",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "740 cc",
+            "value": "740 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Menor a 1 lt",
+            "value": "Menor a 1 lt",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Amargor",
+        "name": "Amargor (IBU)",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 224,
+            "display_name": "0-25 Amargor bajo",
+            "value": "0-25 Amargor bajo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 98,
+            "display_name": "25-50 Amargor medio",
+            "value": "25-50 Amargor medio",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 17,
+            "display_name": "50-75 Amargor alto",
+            "value": "50-75 Amargor alto",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "75-100 Amargor muy alto",
+            "value": "75-100 Amargor muy alto",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "País de Origen",
+        "name": "País de Origen",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 15,
+            "display_name": "Alemania",
+            "value": "Alemania",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Argentina",
+            "value": "Argentina",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Austria",
+            "value": "Austria",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 17,
+            "display_name": "Bélgica",
+            "value": "Bélgica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 194,
+            "display_name": "Chile",
+            "value": "Chile",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Escocia",
+            "value": "Escocia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 29,
+            "display_name": "España",
+            "value": "España",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 39,
+            "display_name": "Estados Unidos",
+            "value": "Estados Unidos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Irlanda",
+            "value": "Irlanda",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Italia",
+            "value": "Italia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Japón",
+            "value": "Japón",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 16,
+            "display_name": "México",
+            "value": "México",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 18,
+            "display_name": "Países Bajos",
+            "value": "Países Bajos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 24,
+            "display_name": "Perú",
+            "value": "Perú",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Polonia",
+            "value": "Polonia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 14,
+            "display_name": "Reino Unido",
+            "value": "Reino Unido",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Rusia",
+            "value": "Rusia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tailandia",
+            "value": "Tailandia",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Grado",
+        "name": "Grado",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 9,
+            "display_name": "Alto >7% ABV",
+            "value": "Alto (>7%ABV)",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 136,
+            "display_name": "Bajo <5% ABV",
+            "value": "Bajo (<5%ABV)",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 172,
+            "display_name": "Medio 5 - 7% ABV",
+            "value": "Medio (5-7% ABV)",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 23,
+            "display_name": "Sin alcohol",
+            "value": "Sin alcohol",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Exclusivo Jumbo",
+        "name": "Exclusivo Jumbo",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Sí",
+            "value": "Sí",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Origen",
+        "name": "Origen",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 209,
+            "display_name": "Importado",
+            "value": "Importado",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 193,
+            "display_name": "Nacional",
+            "value": "Nacional",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Contiene Alcohol",
+        "name": "Contiene Alcohol",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 23,
+            "display_name": "No",
+            "value": "No",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 317,
+            "display_name": "Sí",
+            "value": "Sí",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Variedad",
+        "name": "Variedad",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Agua Tónica",
+            "value": "Agua Tónica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ahumada",
+            "value": "Ahumada",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 40,
+            "display_name": "Ale",
+            "value": "Ale",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ambar",
+            "value": "Ambar",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "American Pale Ale",
+            "value": "American Pale Ale",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Bebidas Gaseosas Zero",
+            "value": "Bebidas Gaseosas Zero",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Bebidas Regulares",
+            "value": "Bebidas Regulares",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Belga",
+            "value": "Belga",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Bock",
+            "value": "Bock",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Botanical Tonic",
+            "value": "Botanical Tonic",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cervezas Premium",
+            "value": "Cervezas Premium",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cervezas Tradicionales",
+            "value": "Cervezas Tradicionales",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrica",
+            "value": "Cítrica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cóctel",
+            "value": "Cóctel",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dry Bitter",
+            "value": "Dry Bitter",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dry Tonic",
+            "value": "Dry Tonic",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Fruit Beer",
+            "value": "Fruit Beer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Fruit Pale Ale",
+            "value": "Fruit Pale Ale",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Frutal",
+            "value": "Frutal",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ginger Beer",
+            "value": "Ginger Beer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Gingerbeer",
+            "value": "Gingerbeer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Golden Ale",
+            "value": "Golden Ale",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Helles",
+            "value": "Helles",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 11,
+            "display_name": "Ipa",
+            "value": "Ipa",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 34,
+            "display_name": "Lager",
+            "value": "Lager",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lager Americana",
+            "value": "Lager Americana",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lager Blanca",
+            "value": "Lager Blanca",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lager Dorada",
+            "value": "Lager Dorada",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lager Internacional",
+            "value": "Lager Internacional",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lager Light",
+            "value": "Lager Light",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Light",
+            "value": "Light",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Marzen",
+            "value": "Marzen",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Mixto",
+            "value": "Mixto",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 22,
+            "display_name": "Negra",
+            "value": "Negra",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Normal",
+            "value": "Normal",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Pilsner",
+            "value": "Pilsner",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Pink Grapefruit",
+            "value": "Pink Grapefruit",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Roja",
+            "value": "Roja",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 187,
+            "display_name": "Rubia",
+            "value": "Rubia",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Sin Alcohol",
+            "value": "Sin Alcohol",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "SinAlcohol",
+            "value": "SinAlcohol",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "SinGluten",
+            "value": "SinGluten",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Super Italian",
+            "value": "Super Italian",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 8,
+            "display_name": "Trigo",
+            "value": "Trigo",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Formato",
+        "name": "Formato",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Individual",
+            "value": "Individual",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 16,
+            "display_name": "Pack",
+            "value": "Pack",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Condiciones Alimentarias",
+        "name": "Condiciones Alimentarias",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Kosher",
+            "value": "Kosher",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 53,
+            "display_name": "Vegetariano",
+            "value": "Vegetariano",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 53,
+            "display_name": "Vegano",
+            "value": "Vegano",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Soya",
+            "value": "Libre de Soya",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Peces",
+            "value": "Libre de Peces",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Nueces",
+            "value": "Libre de Nueces",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Mariscos",
+            "value": "Libre de Mariscos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Maní",
+            "value": "Libre de Maní",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Huevo",
+            "value": "Libre de Huevo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 50,
+            "display_name": "Libre de Frutos Secos",
+            "value": "Libre de Frutos Secos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 49,
+            "display_name": "Libre de Trigo",
+            "value": "Libre de Trigo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 49,
+            "display_name": "Libre de Sulfitos",
+            "value": "Libre de Sulfitos",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 49,
+            "display_name": "Libre de Lactosa",
+            "value": "Libre de Lactosa",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 49,
+            "display_name": "Apto para APLV",
+            "value": "Apto para APLV",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 18,
+            "display_name": "Libre de Gluten",
+            "value": "Libre de Gluten",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Rango de Contenido",
+        "name": "Rango de Contenido",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 295,
+            "display_name": "200 a 355 cc",
+            "value": "200 a 355 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 45,
+            "display_name": "375 a 600 cc",
+            "value": "375 a 600 cc",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Más de 650 cc",
+            "value": "Más de 650 cc",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Sabor",
+        "name": "Sabor",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Afrutado a arándano, dulce, ligeramente ácido.",
+            "value": "Afrutado a arándano, dulce, ligeramente ácido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Afrutado a calafate, dulce, notas ácidas.",
+            "value": "Afrutado a calafate, dulce, notas ácidas.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Afrutado a frutos rojos, dulce, ligeramente ácido.",
+            "value": "Afrutado a frutos rojos, dulce, ligeramente ácido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Afrutado a maqui, ligeramente ácido, herbal.",
+            "value": "Afrutado a maqui, ligeramente ácido, herbal.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Afrutado a ruibarbo, dulce, ligeramente ácido.",
+            "value": "Afrutado a ruibarbo, dulce, ligeramente ácido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Agua Tónica",
+            "value": "Agua Tónica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ahumado intenso, notas cárnicas, tostado.",
+            "value": "Ahumado intenso, notas cárnicas, tostado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ahumado, caramelo, tostado suave.",
+            "value": "Ahumado, caramelo, tostado suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Beer",
+            "value": "Beer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Blossom",
+            "value": "Blossom",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Café tostado, chocolate, caramelo",
+            "value": "Café tostado, chocolate, caramelo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Calafate",
+            "value": "Calafate",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Caramelo, malta tostada, final dulce.",
+            "value": "Caramelo, malta tostada, final dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Caramelo, maltoso tostado, amargor moderado.",
+            "value": "Caramelo, maltoso tostado, amargor moderado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Caramelo, maltoso, amargor suave.",
+            "value": "Caramelo, maltoso, amargor suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Caramelo, tostado ligero, final limpio.",
+            "value": "Caramelo, tostado ligero, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cereal, frutal (plátano), especiado, levadura.",
+            "value": "Cereal, frutal (plátano), especiado, levadura.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cereal, limpio, suave",
+            "value": "Cereal, limpio, suave",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cereal, maíz, ligero lúpulo",
+            "value": "Cereal, maíz, ligero lúpulo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Cereales, ligero amargor, final limpio.",
+            "value": "Cereales, ligero amargor, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Chocolate",
+            "value": "Chocolate",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Chocolate, naranja, maltoso dulce.",
+            "value": "Chocolate, naranja, maltoso dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Citrica, Amargo",
+            "value": "Citrica, Amargo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrico, dulce, afrutado, refrescante.",
+            "value": "Cítrico, dulce, afrutado, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cítrico, dulce, refrescante, sin alcohol.",
+            "value": "Cítrico, dulce, refrescante, sin alcohol.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cítrico, especiado (cilantro), ligero, refrescante.",
+            "value": "Cítrico, especiado (cilantro), ligero, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrico, especiado (clavo, plátano), trigo",
+            "value": "Cítrico, especiado (clavo, plátano), trigo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cítrico, especiado (naranja/cilantro), ligero.",
+            "value": "Cítrico, especiado (naranja/cilantro), ligero.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cítrico, floral, amargor equilibrado.",
+            "value": "Cítrico, floral, amargor equilibrado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrico, floral, amargor refrescante.",
+            "value": "Cítrico, floral, amargor refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrico, frutal, amargor suave.",
+            "value": "Cítrico, frutal, amargor suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Cítrico, herbal, amargor moderado, refrescante.",
+            "value": "Cítrico, herbal, amargor moderado, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Cítrico, resinoso, amargor balanceado.",
+            "value": "Cítrico, resinoso, amargor balanceado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Cítrico, resinoso, amargor pronunciado.",
+            "value": "Cítrico, resinoso, amargor pronunciado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dry Tonic",
+            "value": "Dry Tonic",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce a limón",
+            "value": "Dulce a limón",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce a miel, maltoso, suave.",
+            "value": "Dulce a miel, maltoso, suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, afrutado (frutos rojos), refrescante.",
+            "value": "Dulce, afrutado (frutos rojos), refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Dulce, afrutado a frutos rojos, refrescante.",
+            "value": "Dulce, afrutado a frutos rojos, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, afrutado a lúcuma, refrescante.",
+            "value": "Dulce, afrutado a lúcuma, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, afrutado a mango, refrescante.",
+            "value": "Dulce, afrutado a mango, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, afrutado tropical, con cuerpo.",
+            "value": "Dulce, afrutado tropical, con cuerpo.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, afrutado, con cuerpo.",
+            "value": "Dulce, afrutado, con cuerpo.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Dulce, maltoso, acaramelado, ligero tostado.",
+            "value": "Dulce, maltoso, acaramelado, ligero tostado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Elaborada con ingredientes premium que hacen de Stella Artois, una cerveza de alta calidad con un sabor original",
+            "value": "Elaborada con ingredientes premium que hacen de Stella Artois, una cerveza de alta calidad con un sabor original",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Elderflower",
+            "value": "Elderflower",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "En boca es equilibrado, de amargor ligero, con cuerpo. Regusto dulce, con ligera acidez y sequedad en boca.",
+            "value": "En boca es equilibrado, de amargor ligero, con cuerpo. Regusto dulce, con ligera acidez y sequedad en boca.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "En boca, se reproduce el sabor a malta, pan, con entrada dulce y final seco, con un leve amargor herbal muy refrescante.",
+            "value": "En boca, se reproduce el sabor a malta, pan, con entrada dulce y final seco, con un leve amargor herbal muy refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Equilibrado, refrescante, con predominio del lúpulo que aporta amargor y notas herbales o cítricas. Toque suave de malta con un matiz dulce",
+            "value": "Equilibrado, refrescante, con predominio del lúpulo que aporta amargor y notas herbales o cítricas. Toque suave de malta con un matiz dulce",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Floral, Amargo",
+            "value": "Floral, Amargo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Floral, lúpulo exótico, malta suave.",
+            "value": "Floral, lúpulo exótico, malta suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Fresco, maltoso, notas de levadura, ligeramente turbio.",
+            "value": "Fresco, maltoso, notas de levadura, ligeramente turbio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Frescura y acidez perfecta gracias a la malta con que se fabrica",
+            "value": "Frescura y acidez perfecta gracias a la malta con que se fabrica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Frutal, cítrico, amargor equilibrado.",
+            "value": "Frutal, cítrico, amargor equilibrado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Frutal, especiado, maltoso, ligeramente dulce.",
+            "value": "Frutal, especiado, maltoso, ligeramente dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Ginger Ale",
+            "value": "Ginger Ale",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Ginger Beer",
+            "value": "Ginger Beer",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso caramelo, frutos secos, amargor balanceado.",
+            "value": "Intenso caramelo, frutos secos, amargor balanceado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso lúpulo, amargor pronunciado, maltoso.",
+            "value": "Intenso lúpulo, amargor pronunciado, maltoso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso, caramelo, frutos secos, alcohólico.",
+            "value": "Intenso, caramelo, frutos secos, alcohólico.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Intenso, dulce de malta, tostado, cuerpo pleno.",
+            "value": "Intenso, dulce de malta, tostado, cuerpo pleno.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Intenso, maltoso, caramelo, cálido alcohólico.",
+            "value": "Intenso, maltoso, caramelo, cálido alcohólico.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso, maltoso, caramelo, cálido.",
+            "value": "Intenso, maltoso, caramelo, cálido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso, maltoso, caramelo, ligeramente dulce.",
+            "value": "Intenso, maltoso, caramelo, ligeramente dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Intenso, maltoso, cálido alcohólico.",
+            "value": "Intenso, maltoso, cálido alcohólico.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Jengibre",
+            "value": "Jengibre",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, afrutado, malta suave.",
+            "value": "Ligero, afrutado, malta suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, cereal, notas de plátano, refrescante.",
+            "value": "Ligero, cereal, notas de plátano, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Ligero, cereales, final seco, amargor sutil.",
+            "value": "Ligero, cereales, final seco, amargor sutil.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Ligero, fresco, poco amargor.",
+            "value": "Ligero, fresco, poco amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, frutal, malta suave.",
+            "value": "Ligero, frutal, malta suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, frutal, maltoso, refrescante.",
+            "value": "Ligero, frutal, maltoso, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, limpio, refrescante, con un toque más de malta.",
+            "value": "Ligero, limpio, refrescante, con un toque más de malta.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Ligero, limpio, refrescante.",
+            "value": "Ligero, limpio, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 16,
+            "display_name": "Ligero, malta pálida, lúpulo sutil.",
+            "value": "Ligero, malta pálida, lúpulo sutil.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 33,
+            "display_name": "Ligero, malta pálida, refrescante.",
+            "value": "Ligero, malta pálida, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, malta suave, amargor floral.",
+            "value": "Ligero, malta suave, amargor floral.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 20,
+            "display_name": "Ligero, malta suave, amargor moderado.",
+            "value": "Ligero, malta suave, amargor moderado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, malta suave, muy bebible.",
+            "value": "Ligero, malta suave, muy bebible.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 27,
+            "display_name": "Ligero, malta suave, refrescante.",
+            "value": "Ligero, malta suave, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 16,
+            "display_name": "Ligero, maltoso, refrescante, sin amargor.",
+            "value": "Ligero, maltoso, refrescante, sin amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, refrescante, malta limpia, sin gluten.",
+            "value": "Ligero, refrescante, malta limpia, sin gluten.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, refrescante, malta limpia.",
+            "value": "Ligero, refrescante, malta limpia.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Ligero, trigo, notas cítricas, refrescante.",
+            "value": "Ligero, trigo, notas cítricas, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Limpio, amargor herbal, malta ligera.",
+            "value": "Limpio, amargor herbal, malta ligera.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Limpio, malta suave, amargor sutil.",
+            "value": "Limpio, malta suave, amargor sutil.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Limpio, malta, amargor herbal, fresco.",
+            "value": "Limpio, malta, amargor herbal, fresco.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Limón",
+            "value": "Limón",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Lúcuma",
+            "value": "Lúcuma",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Lúpulo cítrico, floral, malta limpia.",
+            "value": "Lúpulo cítrico, floral, malta limpia.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta pálida, amargor herbal, final limpio.",
+            "value": "Malta pálida, amargor herbal, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Malta pálida, amargor herbal, final seco.",
+            "value": "Malta pálida, amargor herbal, final seco.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 10,
+            "display_name": "Malta pálida, ligero amargor, final limpio.",
+            "value": "Malta pálida, ligero amargor, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta pálida, refrescante, sin amargor.",
+            "value": "Malta pálida, refrescante, sin amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Malta suave, amargor herbal, equilibrado.",
+            "value": "Malta suave, amargor herbal, equilibrado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta suave, ligero especiado, final limpio.",
+            "value": "Malta suave, ligero especiado, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta suave, limpio, ligero amargor.",
+            "value": "Malta suave, limpio, ligero amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta suave, refrescante, sin gluten.",
+            "value": "Malta suave, refrescante, sin gluten.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Malta Tostada",
+            "value": "Malta Tostada",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Malta tostada, caramelo, frutal",
+            "value": "Malta tostada, caramelo, frutal",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Maltoso intenso, caramelo, frutos secos, alcohólico.",
+            "value": "Maltoso intenso, caramelo, frutos secos, alcohólico.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso intenso, ligero caramelo, cálido.",
+            "value": "Maltoso intenso, ligero caramelo, cálido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso tostado, caramelo, dulce, suave.",
+            "value": "Maltoso tostado, caramelo, dulce, suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Maltoso tostado, ligero caramelo, sin alcohol.",
+            "value": "Maltoso tostado, ligero caramelo, sin alcohol.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 6,
+            "display_name": "Maltoso, caramelo, equilibrio amargo-dulce.",
+            "value": "Maltoso, caramelo, equilibrio amargo-dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, caramelo, especiado, dulzor equilibrado.",
+            "value": "Maltoso, caramelo, especiado, dulzor equilibrado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, caramelo, frutos secos, leve dulzor.",
+            "value": "Maltoso, caramelo, frutos secos, leve dulzor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, caramelo, tostado ligero, amargor balanceado.",
+            "value": "Maltoso, caramelo, tostado ligero, amargor balanceado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 8,
+            "display_name": "Maltoso, caramelo, tostado ligero.",
+            "value": "Maltoso, caramelo, tostado ligero.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, caramelo, tostado, cuerpo medio.",
+            "value": "Maltoso, caramelo, tostado, cuerpo medio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, cuerpo medio, final limpio.",
+            "value": "Maltoso, cuerpo medio, final limpio.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, dulce, final limpio y ligeramente lupulado.",
+            "value": "Maltoso, dulce, final limpio y ligeramente lupulado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, especiado, ligeramente dulce, cálido.",
+            "value": "Maltoso, especiado, ligeramente dulce, cálido.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Maltoso, floral, amargor especiado.",
+            "value": "Maltoso, floral, amargor especiado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, herbal, amargor moderado.",
+            "value": "Maltoso, herbal, amargor moderado.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, limpio, refrescante",
+            "value": "Maltoso, limpio, refrescante",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, pan, floral",
+            "value": "Maltoso, pan, floral",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, pan, ligero lúpulo",
+            "value": "Maltoso, pan, ligero lúpulo",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maltoso, suave, final ligeramente dulce.",
+            "value": "Maltoso, suave, final ligeramente dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Mango, lima, salado, dulce.",
+            "value": "Mango, lima, salado, dulce.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Maracuyá",
+            "value": "Maracuyá",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Muy ligero, bajo en calorías, refrescante.",
+            "value": "Muy ligero, bajo en calorías, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 7,
+            "display_name": "Muy ligero, malta pálida, refrescante.",
+            "value": "Muy ligero, malta pálida, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Muy ligero, refrescante, sutil malta.",
+            "value": "Muy ligero, refrescante, sutil malta.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Muy seca, malta ligera, final crujiente.",
+            "value": "Muy seca, malta ligera, final crujiente.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Notas frutales, malta suave, refrescante.",
+            "value": "Notas frutales, malta suave, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Pink",
+            "value": "Pink",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Pink Tonic",
+            "value": "Pink Tonic",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Plátano, clavo, especiado, cremoso.",
+            "value": "Plátano, clavo, especiado, cremoso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Plátano, clavo, especiado, refrescante.",
+            "value": "Plátano, clavo, especiado, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Quinina",
+            "value": "Quinina",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Refrescante, notas de malta y lúpulo floral.",
+            "value": "Refrescante, notas de malta y lúpulo floral.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Sabor Ligero",
+            "value": "Sabor Ligero",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Sandía jugosa, dulce, refrescante",
+            "value": "Sandía jugosa, dulce, refrescante",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Seco, limpio, ligero, refrescante.",
+            "value": "Seco, limpio, ligero, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 3,
+            "display_name": "Suave, frutal, maltoso ligero, bajo amargor.",
+            "value": "Suave, frutal, maltoso ligero, bajo amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Suave, malta pálida, refrescante.",
+            "value": "Suave, malta pálida, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Suave, maltoso, refrescante.",
+            "value": "Suave, maltoso, refrescante.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, café, caramelo, amargor suave.",
+            "value": "Tostado, café, caramelo, amargor suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, café, chocolate amargo, cremoso.",
+            "value": "Tostado, café, chocolate amargo, cremoso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, café, chocolate amargo, suave.",
+            "value": "Tostado, café, chocolate amargo, suave.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, café, chocolate, cremoso.",
+            "value": "Tostado, café, chocolate, cremoso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 2,
+            "display_name": "Tostado, café, chocolate, ligero amargor.",
+            "value": "Tostado, café, chocolate, ligero amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, café, chocolate, suave dulzor.",
+            "value": "Tostado, café, chocolate, suave dulzor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, caramelo, chocolate suave, terroso.",
+            "value": "Tostado, caramelo, chocolate suave, terroso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, chocolate, café suave, caramelo.",
+            "value": "Tostado, chocolate, café suave, caramelo.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, malta oscura, caramelo, suave amargor.",
+            "value": "Tostado, malta oscura, caramelo, suave amargor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tostado, malta oscura, suave dulzor.",
+            "value": "Tostado, malta oscura, suave dulzor.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 1,
+            "display_name": "Tropical, jugoso, suave amargor, sedoso.",
+            "value": "Tropical, jugoso, suave amargor, sedoso.",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 5,
+            "display_name": "Tónica",
+            "value": "Tónica",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 9,
+            "display_name": "Varios sabores, según la variedad específica.",
+            "value": "Varios sabores, según la variedad específica.",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Evento",
+        "name": "Evento",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 41,
+            "display_name": "Cyber",
+            "value": "Cyber",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 361,
+            "display_name": "",
+            "value": "",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      },
+      {
+        "display_name": "Tamaño",
+        "name": "Tamaño",
+        "type": "multiple",
+        "options": [
+          {
+            "status": "",
+            "count": 4,
+            "display_name": "Familiar",
+            "value": "Familiar",
+            "data": {}
+          },
+          {
+            "status": "",
+            "count": 18,
+            "display_name": "Individual",
+            "value": "Individual",
+            "data": {}
+          }
+        ],
+        "hidden": false,
+        "data": {}
+      }
+    ],
+    "groups": [
+      {
+        "group_id": "204",
+        "display_name": "Licores, Bebidas y Aguas",
+        "count": 401,
+        "data": null,
+        "children": [
+          {
+            "group_id": "205",
+            "display_name": "Cervezas",
+            "count": 340,
+            "data": null,
+            "children": [],
+            "parents": [
+              {
+                "display_name": "Licores, Bebidas y Aguas",
+                "group_id": "204"
+              }
+            ]
+          },
+          {
+            "group_id": "794",
+            "display_name": "Sin Alcohol",
+            "count": 19,
+            "data": null,
+            "children": [],
+            "parents": [
+              {
+                "display_name": "Licores, Bebidas y Aguas",
+                "group_id": "204"
+              }
+            ]
+          },
+          {
+            "group_id": "958",
+            "display_name": "Bebidas Gaseosas",
+            "count": 2,
+            "data": null,
+            "children": [],
+            "parents": [
+              {
+                "display_name": "Licores, Bebidas y Aguas",
+                "group_id": "204"
+              }
+            ]
+          },
+          {
+            "group_id": "950",
+            "display_name": "Agua Tónica y Ginger Beer",
+            "count": 59,
+            "data": null,
+            "children": [],
+            "parents": [
+              {
+                "display_name": "Licores, Bebidas y Aguas",
+                "group_id": "204"
+              }
+            ]
+          }
+        ],
+        "parents": []
+      },
+      {
+        "group_id": "335",
+        "display_name": "Hogar, Juguetería y Librería",
+        "count": 1,
+        "data": null,
+        "children": [
+          {
+            "group_id": "354",
+            "display_name": "Hogar",
+            "count": 1,
+            "data": null,
+            "children": [],
+            "parents": [
+              {
+                "display_name": "Hogar, Juguetería y Librería",
+                "group_id": "335"
+              }
+            ]
+          }
+        ],
+        "parents": []
+      }
+    ],
+    "results": [
+      {
+        "matched_terms": [
+          "cerveza",
+          "pack"
+        ],
+        "labels": {},
+        "data": {
+          "id": "130251",
+          "url": "https://www.jumbo.cl/pack-24-unidades-cerveza-stella-artois-lager-5-2g-330-cc-1976135-pak/p",
+          "RefId": "1976135-PAK",
+          "Evento": [
+            "Cyber"
+          ],
+          "Origen": [
+            "Importado"
+          ],
+          "images": [
+            "https://jumbocl.vteximg.com.br/arquivos/ids/320505/Pack-24-un-Cerveza-Stella-Artois-Lager-52%C2%B0-330-cc.jpg?v=638776420653930000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/320506/Pack-24-un-Cerveza-Stella-Artois-Lager-52%C2%B0-330-cc.jpg?v=638776420657830000"
+          ],
+          "brands": [
+            "Stella Artois"
+          ],
+          "Envase": [
+            "Botella"
+          ],
+          "BrandId": "2001025",
+          "Regalos": [
+            ""
+          ],
+          "SkuData": [
+            "{\"130251\":{\"ref_id\":\"1976135-PAK\",\"cart_limit\":\"8\",\"allow_notes\":true,\"allow_substitute\":true,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"promotions\":[],\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":7.92,\"measurement_unit_selector\":false,\"release_data\":{\"date_release\":\"06-12-2016 00:00\",\"date_release_end\":\"05-01-2017 00:00\",\"is_new\":false},\"promotionData\":{\"promotionName\":\"\",\"promotionShortDescription\":\"\",\"promotionDescription\":\"\",\"promotionFeature\":\"\"}}}"
+          ],
+          "Id Grupo": [
+            "260304004"
+          ],
+          "KeyWords": "",
+          "SellerVSS": [
+            "jumboclj414",
+            "jumboclj762",
+            "jumboclj506",
+            "jumboclj507",
+            "jumboclj695",
+            "jumboclj519",
+            "jumboclj955",
+            "jumboclj511",
+            "jumboclj532",
+            "jumboclj591",
+            "jumboclj411",
+            "jumboclj504",
+            "jumboclj614",
+            "jumboclj624",
+            "jumboclj775",
+            "jumboclj508",
+            "jumboclj760",
+            "jumboclj748",
+            "jumboclj408",
+            "jumboclj659",
+            "jumboclj780",
+            "jumboclj592",
+            "jumboclj619",
+            "jumboclj989",
+            "jumboclj501",
+            "jumboclj843",
+            "jumboclj512",
+            "jumboclj502",
+            "jumboclj633",
+            "jumboclj534",
+            "jumboclj410",
+            "jumboclj513",
+            "jumboclj660",
+            "jumboclj403"
+          ],
+          "BrandName": "Stella Artois",
+          "DetailUrl": "/pack-24-unidades-cerveza-stella-artois-lager-5-2g-330-cc-1976135-pak/p",
+          "ProductId": 129960,
+          "productId": 129960,
+          "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/320505/Pack-24-un-Cerveza-Stella-Artois-Lager-52%C2%B0-330-cc.jpg?v=638776420653930000",
+          "ProductName": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc",
+          "Vendido por": [
+            "Jumbo"
+          ],
+          "ProductData": [
+            "{\"allow_notes\":true,\"allow_substitute\":true,\"cart_limit\":\"8\",\"brandName\":\"Stella Artois\",\"brandEcomId\":2001025,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":7.92,\"measurement_unit_selector\":false,\"cart_limit_express_delivery\":\"8\"}"
+          ],
+          "Id Subrubro": [
+            "260304"
+          ],
+          "No Perecible": [
+            "Si"
+          ],
+          "ProductRefId": "1976135-PAK",
+          "UnitMultiplier": 1,
+          "Producto Nuevo": [
+            "Producto Antiguo"
+          ],
+          "collectionsIds": [
+            "22523",
+            "23175",
+            "25263",
+            "25266",
+            "25333",
+            "25334",
+            "25408",
+            "25409",
+            "25411",
+            "25412",
+            "25422",
+            "25543",
+            "25578",
+            "25607",
+            "25679",
+            "25695",
+            "25741",
+            "25969",
+            "25974",
+            "28956",
+            "28992",
+            "29045",
+            "29440",
+            "29472",
+            "29512",
+            "29513",
+            "29515",
+            "29516",
+            "29571",
+            "29579",
+            "29597",
+            "29621",
+            "29626",
+            "29646",
+            "29697",
+            "29706",
+            "29712",
+            "29713",
+            "29720",
+            "29742",
+            "29771",
+            "29827",
+            "29842",
+            "29869",
+            "29874"
+          ],
+          "País de Origen": [
+            "Bélgica"
+          ],
+          "MeasurementUnit": "un",
+          "Tipo de Producto": [
+            "Cervezas Tradicionales"
+          ],
+          "ProductCategories": "{\"204\":\"Licores, Bebidas y Aguas\",\"205\":\"Cervezas\",\"208\":\"Cervezas Tradicionales\"}",
+          "ProductCategoryIds": "/204/205/208/",
+          "ProductClustersIds": "22523,23175,25263,25266,25333,25334,25408,25409,25411,25412,25422,25543,25578,25607,25679,25695,25741,25969,25974,28956,28992,29045,29440,29472,29512,29513,29515,29516,29571,29579,29597,29621,29626,29646,29697,29706,29712,29713,29720,29742,29771,29827,29842,29869,29874",
+          "price": 23290,
+          "storeId": "jumboclj633",
+          "listPrice": 23290,
+          "outOfStock": false,
+          "stockLevel": "in-stock",
+          "variation_id": "130251-jumboclj633",
+          "sellingPrice": 13974,
+          "originalPrice": 23290
+        },
+        "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc",
+        "is_slotted": false,
+        "variations": [
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj633",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj633",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj508",
+              "listPrice": 23290,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "variation_id": "130251-jumboclj508",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj414",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj414",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj403",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj403",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj411",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj411",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj513",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj513",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj507",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj507",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj534",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj534",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj519",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj519",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj775",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj775",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj410",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130251-jumboclj410",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj760",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj760",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj504",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj504",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj532",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj532",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj512",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj512",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj591",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj591",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj502",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj502",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj619",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj619",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj955",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj955",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj511",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130251-jumboclj511",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj659",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj659",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj748",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj748",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumbocl",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumbocl",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj843",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj843",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj506",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj506",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj695",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj695",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj989",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj989",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23990,
+              "storeId": "jumboclj520",
+              "listPrice": 23990,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "variation_id": "130251-jumboclj520",
+              "sellingPrice": 14990,
+              "originalPrice": 23990
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj592",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj592",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj521",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj521",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj614",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj614",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj660",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj660",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj780",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj780",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj408",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj408",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23990,
+              "storeId": "1",
+              "listPrice": 23990,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-1",
+              "sellingPrice": 14990,
+              "originalPrice": 23990
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23990,
+              "storeId": "jumboclj502rincon",
+              "listPrice": 23990,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "variation_id": "130251-jumboclj502rincon",
+              "sellingPrice": 14990,
+              "originalPrice": 23990
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj624",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj624",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj501",
+              "listPrice": 23290,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130251-jumboclj501",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj514rincon",
+              "listPrice": 23290,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "variation_id": "130251-jumboclj514rincon",
+              "sellingPrice": 13974,
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          },
+          {
+            "data": {
+              "price": 23290,
+              "storeId": "jumboclj762",
+              "listPrice": 23290,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 13974,
+              "variation_id": "130251-jumboclj762",
+              "originalPrice": 23290
+            },
+            "value": "Pack 24 un. Cerveza Stella Artois Lager 5.2° 330 cc"
+          }
+        ]
+      },
+      {
+        "matched_terms": [
+          "cerveza",
+          "pack"
+        ],
+        "labels": {},
+        "data": {
+          "id": "130256",
+          "url": "https://www.jumbo.cl/pack-12-unidades-cerveza-stella-artois-lager-5-2g-354-cc-1976130-pak/p",
+          "RefId": "1976130-PAK",
+          "Envase": [
+            "Lata"
+          ],
+          "Origen": [
+            "Importado"
+          ],
+          "brands": [
+            "Stella Artois"
+          ],
+          "images": [
+            "https://jumbocl.vteximg.com.br/arquivos/ids/489207/Pack-12-un-Cerveza-Stella-Artois-Lager-52%C2%B0-354-cc.jpg?v=638899506434330000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/489208/Pack-12-un-Cerveza-Stella-Artois-Lager-52%C2%B0-354-cc.jpg?v=638899506436800000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/489209/Pack-12-un-Cerveza-Stella-Artois-Lager-52%C2%B0-354-cc.jpg?v=638899506438800000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/489210/Pack-12-un-Cerveza-Stella-Artois-Lager-52%C2%B0-354-cc.jpg?v=638899506441470000"
+          ],
+          "Evento": [
+            "Cyber"
+          ],
+          "Regalos": [
+            ""
+          ],
+          "BrandId": "2001025",
+          "SkuData": [
+            "{\"130256\":{\"ref_id\":\"1976130-PAK\",\"cart_limit\":\"8\",\"allow_notes\":true,\"allow_substitute\":true,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"promotions\":[],\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":4.248,\"measurement_unit_selector\":false,\"release_data\":{\"date_release\":\"06-12-2016 00:00\",\"date_release_end\":\"05-01-2017 00:00\",\"is_new\":false},\"promotionData\":{\"promotionName\":\"\",\"promotionShortDescription\":\"\",\"promotionDescription\":\"\",\"promotionFeature\":\"\"}}}"
+          ],
+          "Id Grupo": [
+            "260304001"
+          ],
+          "KeyWords": "",
+          "ProductId": 129953,
+          "BrandName": "Stella Artois",
+          "DetailUrl": "/pack-12-unidades-cerveza-stella-artois-lager-5-2g-354-cc-1976130-pak/p",
+          "productId": 129953,
+          "SellerVSS": [
+            "jumboclj519",
+            "jumboclj507",
+            "jumboclj512",
+            "jumboclj506",
+            "jumboclj624",
+            "jumboclj521",
+            "jumboclj955",
+            "jumboclj511",
+            "jumboclj633",
+            "jumboclj414",
+            "jumboclj403",
+            "jumboclj660",
+            "jumboclj760",
+            "jumboclj508",
+            "jumboclj989",
+            "jumboclj592",
+            "jumboclj659",
+            "jumboclj513",
+            "jumboclj532",
+            "jumboclj408",
+            "jumboclj695",
+            "jumboclj843",
+            "jumboclj501",
+            "jumboclj502",
+            "jumboclj614",
+            "jumboclj504",
+            "jumboclj762",
+            "jumboclj748",
+            "jumboclj775",
+            "jumboclj411",
+            "jumboclj410",
+            "jumboclj619",
+            "jumboclj591",
+            "jumboclj780",
+            "jumboclj534"
+          ],
+          "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/489207/Pack-12-un-Cerveza-Stella-Artois-Lager-52%C2%B0-354-cc.jpg?v=638899506434330000",
+          "Id Subrubro": [
+            "260304"
+          ],
+          "ProductName": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc",
+          "ProductData": [
+            "{\"allow_notes\":true,\"allow_substitute\":true,\"cart_limit\":\"8\",\"brandName\":\"Stella Artois\",\"brandEcomId\":2001025,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":4.248,\"measurement_unit_selector\":false,\"cart_limit_express_delivery\":\"8\"}"
+          ],
+          "Vendido por": [
+            "Jumbo"
+          ],
+          "ProductRefId": "1976130-PAK",
+          "No Perecible": [
+            "Si"
+          ],
+          "Producto Nuevo": [
+            "Producto Antiguo"
+          ],
+          "UnitMultiplier": 1,
+          "País de Origen": [
+            "Bélgica"
+          ],
+          "collectionsIds": [
+            "19270",
+            "22523",
+            "23175",
+            "25263",
+            "25266",
+            "25333",
+            "25334",
+            "25422",
+            "25425",
+            "25543",
+            "25578",
+            "25607",
+            "25695",
+            "25741",
+            "28956",
+            "28992",
+            "29036",
+            "29045",
+            "29472",
+            "29571",
+            "29579",
+            "29597",
+            "29621",
+            "29626",
+            "29869",
+            "29874"
+          ],
+          "MeasurementUnit": "un",
+          "Tipo de Producto": [
+            "Cervezas Tradicionales"
+          ],
+          "ProductCategories": "{\"204\":\"Licores, Bebidas y Aguas\",\"205\":\"Cervezas\",\"208\":\"Cervezas Tradicionales\"}",
+          "ProductClustersIds": "19270,22523,23175,25263,25266,25333,25334,25422,25425,25543,25578,25607,25695,25741,28956,28992,29036,29045,29472,29571,29579,29597,29621,29626,29869,29874",
+          "ProductCategoryIds": "/204/205/208/",
+          "price": 10790,
+          "storeId": "jumboclj659",
+          "listPrice": 10790,
+          "outOfStock": false,
+          "stockLevel": "in-stock",
+          "variation_id": "130256-jumboclj659",
+          "sellingPrice": 6474,
+          "originalPrice": 10790
+        },
+        "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc",
+        "is_slotted": false,
+        "variations": [
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj659",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj659",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj508",
+              "listPrice": 10790,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj508",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj411",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj411",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj775",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj775",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj512",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj512",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj519",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj519",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj504",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj504",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj521",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj521",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj414",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj414",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj403",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130256-jumboclj403",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj592",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj592",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj955",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj955",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj532",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj532",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 9790,
+              "storeId": "jumboclj520",
+              "listPrice": 9790,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "variation_id": "130256-jumboclj520",
+              "sellingPrice": 7990,
+              "originalPrice": 9790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj780",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj780",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumbocl",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumbocl",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj660",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130256-jumboclj660",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj748",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj748",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj633",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj633",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj989",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj989",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj843",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj843",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj513",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj513",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj695",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj695",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj534",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130256-jumboclj534",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj506",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj506",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj614",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj614",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj410",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj410",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj502",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj502",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj760",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj760",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj507",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj507",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj511",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj511",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj591",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj591",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj619",
+              "listPrice": 10790,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj619",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj408",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj408",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 9790,
+              "storeId": "1",
+              "listPrice": 9790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 7990,
+              "variation_id": "130256-1",
+              "originalPrice": 9790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 9790,
+              "storeId": "jumboclj502rincon",
+              "listPrice": 9790,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "variation_id": "130256-jumboclj502rincon",
+              "sellingPrice": 7990,
+              "originalPrice": 9790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj624",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj624",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj501",
+              "listPrice": 10790,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "130256-jumboclj501",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj514rincon",
+              "listPrice": 10790,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "sellingPrice": 6474,
+              "variation_id": "130256-jumboclj514rincon",
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          },
+          {
+            "data": {
+              "price": 10790,
+              "storeId": "jumboclj762",
+              "listPrice": 10790,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "130256-jumboclj762",
+              "sellingPrice": 6474,
+              "originalPrice": 10790
+            },
+            "value": "Pack 12 un. Cerveza Stella Artois Lager 5.2° 354 cc"
+          }
+        ]
+      },
+      {
+        "matched_terms": [
+          "cerveza",
+          "pack"
+        ],
+        "labels": {},
+        "data": {
+          "id": "127785",
+          "url": "https://www.jumbo.cl/pack-12-unidades-cerveza-kunstmann-torobayo-pale-ale-5-0g-330-cc-1964135-pak/p",
+          "RefId": "1964135-PAK",
+          "images": [
+            "https://jumbocl.vteximg.com.br/arquivos/ids/648766/Pack-12-un-Cerveza-Kunstmann-Torobayo-Pale-Ale-50%C2%B0-330-cc.jpg?v=639156687097770000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/648767/Pack-12-un-Cerveza-Kunstmann-Torobayo-Pale-Ale-50%C2%B0-330-cc.jpg?v=639156687100100000",
+            "https://jumbocl.vteximg.com.br/arquivos/ids/648768/Pack-12-un-Cerveza-Kunstmann-Torobayo-Pale-Ale-50%C2%B0-330-cc.jpg?v=639156687102000000"
+          ],
+          "brands": [
+            "Kunstmann"
+          ],
+          "Evento": [
+            "Cyber"
+          ],
+          "Origen": [
+            "Nacional"
+          ],
+          "Envase": [
+            "Botella"
+          ],
+          "SkuData": [
+            "{\"127785\":{\"ref_id\":\"1964135-PAK\",\"cart_limit\":\"8\",\"allow_notes\":true,\"allow_substitute\":true,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"promotions\":[],\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":3.96,\"measurement_unit_selector\":false,\"release_data\":{\"date_release\":\"06-12-2016 00:00\",\"date_release_end\":\"05-01-2017 00:00\",\"is_new\":false},\"promotionData\":{\"promotionName\":\"\",\"promotionShortDescription\":\"\",\"promotionDescription\":\"\",\"promotionFeature\":\"\"}}}"
+          ],
+          "BrandId": "2000591",
+          "Regalos": [
+            ""
+          ],
+          "Id Grupo": [
+            "260303003"
+          ],
+          "KeyWords": "",
+          "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/648766/Pack-12-un-Cerveza-Kunstmann-Torobayo-Pale-Ale-50%C2%B0-330-cc.jpg?v=639156687097770000",
+          "DetailUrl": "/pack-12-unidades-cerveza-kunstmann-torobayo-pale-ale-5-0g-330-cc-1964135-pak/p",
+          "ProductId": 127491,
+          "SellerVSS": [
+            "jumboclj411",
+            "jumboclj512",
+            "jumboclj614",
+            "jumboclj504",
+            "jumboclj955",
+            "jumboclj408",
+            "jumboclj532",
+            "jumboclj513",
+            "jumboclj592",
+            "jumboclj534",
+            "jumboclj762",
+            "jumboclj501",
+            "jumboclj695",
+            "jumboclj502",
+            "jumboclj506",
+            "jumboclj624",
+            "jumboclj508",
+            "jumboclj511",
+            "jumboclj989",
+            "jumboclj659",
+            "jumboclj410",
+            "jumboclj507",
+            "jumboclj843",
+            "jumboclj519",
+            "jumboclj760",
+            "jumboclj775",
+            "jumboclj414",
+            "jumboclj748",
+            "jumboclj633",
+            "jumboclj619",
+            "jumboclj591",
+            "jumboclj780",
+            "jumboclj403",
+            "jumboclj660"
+          ],
+          "BrandName": "Kunstmann",
+          "productId": 127491,
+          "ProductData": [
+            "{\"allow_notes\":true,\"allow_substitute\":true,\"cart_limit\":\"8\",\"brandName\":\"Kunstmann\",\"brandEcomId\":2000591,\"measurement_unit\":\"un\",\"unit_multiplier\":1,\"measurement_unit_un\":\"lt\",\"unit_multiplier_un\":3.96,\"measurement_unit_selector\":false,\"cart_limit_express_delivery\":\"8\"}"
+          ],
+          "Vendido por": [
+            "Jumbo"
+          ],
+          "Id Subrubro": [
+            "260303"
+          ],
+          "ProductName": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc",
+          "No Perecible": [
+            "Si"
+          ],
+          "ProductRefId": "1964135-PAK",
+          "Producto Nuevo": [
+            "Producto Antiguo"
+          ],
+          "UnitMultiplier": 1,
+          "País de Origen": [
+            "Chile"
+          ],
+          "collectionsIds": [
+            "23175",
+            "25263",
+            "25266",
+            "25271",
+            "25333",
+            "25334",
+            "25422",
+            "25695",
+            "28992",
+            "29135",
+            "29261",
+            "29280",
+            "29597",
+            "29621",
+            "29626",
+            "29827",
+            "29842",
+            "29869",
+            "29874"
+          ],
+          "MeasurementUnit": "un",
+          "Tipo de Producto": [
+            "Cervezas Artesanales"
+          ],
+          "ProductCategories": "{\"204\":\"Licores, Bebidas y Aguas\",\"205\":\"Cervezas\",\"209\":\"Cervezas Artesanales\"}",
+          "ProductCategoryIds": "/204/205/209/",
+          "ProductClustersIds": "23175,25263,25266,25271,25333,25334,25422,25695,28992,29135,29261,29280,29597,29621,29626,29827,29842,29869,29874",
+          "price": 21490,
+          "storeId": "jumboclj512",
+          "listPrice": 21490,
+          "stockLevel": "in-stock",
+          "outOfStock": false,
+          "sellingPrice": 15690,
+          "variation_id": "127785-jumboclj512",
+          "originalPrice": 21490
+        },
+        "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc",
+        "is_slotted": false,
+        "variations": [
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj512",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj512",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj513",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj513",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj695",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj695",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj411",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "127785-jumboclj411",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj775",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj775",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj760",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj760",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj410",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj410",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj403",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj403",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj633",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj633",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj414",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj414",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj508",
+              "listPrice": 21490,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj508",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj534",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj534",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumbocl",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "127785-jumbocl",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj748",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj748",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj521",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj521",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj591",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj591",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj592",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj592",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj502",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj502",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj532",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj532",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj955",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj955",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj843",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "127785-jumboclj843",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj660",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj660",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj619",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj619",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj520",
+              "listPrice": 21490,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "sellingPrice": 15990,
+              "variation_id": "127785-jumboclj520",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj511",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj511",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj506",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj506",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj507",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj507",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj614",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj614",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj989",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "variation_id": "127785-jumboclj989",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj504",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj504",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj519",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj519",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj659",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj659",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj780",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj780",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj408",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj408",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "1",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15990,
+              "variation_id": "127785-1",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj502rincon",
+              "listPrice": 21490,
+              "stockLevel": "out-of-stock",
+              "outOfStock": true,
+              "variation_id": "127785-jumboclj502rincon",
+              "sellingPrice": 15990,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj624",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj624",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj514rincon",
+              "listPrice": 21490,
+              "outOfStock": true,
+              "stockLevel": "out-of-stock",
+              "variation_id": "127785-jumboclj514rincon",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj501",
+              "listPrice": 21490,
+              "stockLevel": "in-stock",
+              "outOfStock": false,
+              "sellingPrice": 15690,
+              "variation_id": "127785-jumboclj501",
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          },
+          {
+            "data": {
+              "price": 21490,
+              "storeId": "jumboclj762",
+              "listPrice": 21490,
+              "outOfStock": false,
+              "stockLevel": "in-stock",
+              "variation_id": "127785-jumboclj762",
+              "sellingPrice": 15690,
+              "originalPrice": 21490
+            },
+            "value": "Pack 12 un. Cerveza Kunstmann Torobayo Pale Ale 5.0° 330 cc"
+          }
+        ]
+      }
+    ],
+    "sort_options": [
+      {
+        "sort_by": "relevance",
+        "display_name": "Most Relevant",
+        "sort_order": "descending",
+        "hidden": false,
+        "status": "selected"
+      },
+      {
+        "sort_by": "best-discount",
+        "display_name": "Mejor descuento",
+        "sort_order": "descending",
+        "status": "",
+        "hidden": false
+      },
+      {
+        "sort_by": "price",
+        "display_name": "Precio mayor a menor",
+        "sort_order": "descending",
+        "status": "",
+        "hidden": false
+      },
+      {
+        "sort_by": "price",
+        "display_name": "Precio menor a mayor",
+        "sort_order": "ascending",
+        "status": "",
+        "hidden": false
+      }
+    ],
+    "refined_content": [],
+    "total_num_results": 402,
+    "features": [
+      {
+        "feature_name": "a_a_test",
+        "display_name": "a_a_test",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "auto_generated_refined_query_rules",
+        "display_name": "Affinity Engine",
+        "enabled": true,
+        "variant": {
+          "name": "default_rules",
+          "display_name": "Default weights"
+        }
+      },
+      {
+        "feature_name": "custom_autosuggest_ui",
+        "display_name": "custom_autosuggest_ui",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "disable_test_only_global_rules_browse",
+        "display_name": "Disables global refined filter rules with include_in_test=1 column",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "disable_test_only_global_rules_search",
+        "display_name": "Disables global refined query rules with include_in_test=1 column",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "disable_test_only_tag_rules",
+        "display_name": "disable test only tag rules",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "filter_items",
+        "display_name": "Filter-item boosts",
+        "enabled": true,
+        "variant": {
+          "name": "filter_items_w_atcs_and_purchases",
+          "display_name": "filter_items_w_atcs_and_purchases"
+        }
+      },
+      {
+        "feature_name": "manual_searchandizing",
+        "display_name": "Searchandizing",
+        "enabled": true,
+        "variant": null
+      },
+      {
+        "feature_name": "personalization",
+        "display_name": "Personalization",
+        "enabled": true,
+        "variant": {
+          "name": "default_personalization",
+          "display_name": "Default Personalization"
+        }
+      },
+      {
+        "feature_name": "query_items",
+        "display_name": "Learn To Rank",
+        "enabled": true,
+        "variant": {
+          "name": "query_items_ctr_and_l2r",
+          "display_name": "CTR & LTR"
+        }
+      },
+      {
+        "feature_name": "recommendations_merge_allowlist_rules",
+        "display_name": "recommendations_merge_allowlist_rules",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "refined_tag_rules",
+        "display_name": "refined_tag_rules",
+        "enabled": true,
+        "variant": null
+      },
+      {
+        "feature_name": "reranker_transformations_autocomplete",
+        "display_name": "reranker_transformations_autocomplete",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "reranker_transformations_browse",
+        "display_name": "reranker_transformations_browse",
+        "enabled": true,
+        "variant": {
+          "name": "rpv_variations_base_price_browse",
+          "display_name": "rpv_variations_base_price_browse"
+        }
+      },
+      {
+        "feature_name": "reranker_transformations_search",
+        "display_name": "reranker_transformations_search",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "use_ces_blending",
+        "display_name": "use_ces_blending",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "use_cognitive_embeddings",
+        "display_name": "Use Cognitive Embeddings for more results",
+        "enabled": true,
+        "variant": {
+          "name": "best_for_prospects_online_05_2025",
+          "display_name": "best_for_prospects_online_05_2025"
+        }
+      },
+      {
+        "feature_name": "use_enriched_attributes_as_fuzzy_searchable",
+        "display_name": "use_enriched_attributes_as_fuzzy_searchable",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "use_reranker_service_for_all",
+        "display_name": "[DEPRECATED] Use reranker service to rerank search and browse results",
+        "enabled": false,
+        "variant": null
+      },
+      {
+        "feature_name": "use_reranker_service_for_browse",
+        "display_name": "Use reranker service to rerank browse / collections results",
+        "enabled": true,
+        "variant": {
+          "name": "browse_reranker_v0_rpv_price_top100",
+          "display_name": "browse_reranker_v0_rpv_price_top100"
+        }
+      },
+      {
+        "feature_name": "use_reranker_service_for_search",
+        "display_name": "Use reranker service to rerank search results",
+        "enabled": false,
+        "variant": null
+      }
+    ],
+    "related_searches": [
+      {
+        "query": "cerveza austral"
+      },
+      {
+        "query": "cerveza corona"
+      },
+      {
+        "query": "cerveza guinness"
+      },
+      {
+        "query": "cerveza kunstmann"
+      },
+      {
+        "query": "cerveza patagonia"
+      },
+      {
+        "query": "pack bebidas"
+      }
+    ],
+    "related_browse_pages": [
+      {
+        "filter_name": "group_id",
+        "filter_value": "204",
+        "display_name": "licores, bebidas y aguas",
+        "image_url": ""
+      },
+      {
+        "filter_name": "group_id",
+        "filter_value": "205",
+        "display_name": "cervezas",
+        "image_url": ""
+      },
+      {
+        "filter_name": "group_id",
+        "filter_value": "208",
+        "display_name": "cervezas tradicionales",
+        "image_url": ""
+      },
+      {
+        "filter_name": "group_id",
+        "filter_value": "209",
+        "display_name": "cervezas artesanales",
+        "image_url": ""
+      },
+      {
+        "filter_name": "group_id",
+        "filter_value": "211",
+        "display_name": "cervezas sin alcohol",
+        "image_url": ""
+      }
+    ]
+  },
+  "result_id": "e617e375-5ee2-4e66-beae-12d18ff9da53",
+  "request": {
+    "sort_by": "relevance",
+    "sort_order": "descending",
+    "num_results_per_page": 3,
+    "section": "Products",
+    "blacklist_rules": true,
+    "term": "pack cerveza",
+    "page": 1,
+    "fmt_options": {
+      "groups_start": "current",
+      "groups_max_depth": 1,
+      "show_hidden_facets": false,
+      "show_hidden_fields": false,
+      "show_protected_facets": false
+    },
+    "features": {
+      "query_items": true,
+      "a_a_test": false,
+      "auto_generated_refined_query_rules": true,
+      "manual_searchandizing": true,
+      "personalization": true,
+      "filter_items": true,
+      "use_reranker_service_for_search": false,
+      "use_reranker_service_for_browse": true,
+      "use_reranker_service_for_all": false,
+      "custom_autosuggest_ui": false,
+      "disable_test_only_global_rules_search": false,
+      "disable_test_only_global_rules_browse": false,
+      "use_enriched_attributes_as_fuzzy_searchable": false,
+      "use_cognitive_embeddings": true,
+      "reranker_transformations_autocomplete": false,
+      "disable_test_only_tag_rules": false,
+      "recommendations_merge_allowlist_rules": false,
+      "reranker_transformations_search": false,
+      "use_ces_blending": false,
+      "refined_tag_rules": true,
+      "reranker_transformations_browse": true
+    },
+    "feature_variants": {
+      "query_items": "query_items_ctr_and_l2r",
+      "a_a_test": null,
+      "auto_generated_refined_query_rules": "default_rules",
+      "manual_searchandizing": null,
+      "personalization": "default_personalization",
+      "filter_items": "filter_items_w_atcs_and_purchases",
+      "use_reranker_service_for_search": null,
+      "use_reranker_service_for_browse": "browse_reranker_v0_rpv_price_top100",
+      "use_reranker_service_for_all": null,
+      "custom_autosuggest_ui": null,
+      "disable_test_only_global_rules_search": null,
+      "disable_test_only_global_rules_browse": null,
+      "use_enriched_attributes_as_fuzzy_searchable": null,
+      "use_cognitive_embeddings": "best_for_prospects_online_05_2025",
+      "reranker_transformations_autocomplete": null,
+      "disable_test_only_tag_rules": null,
+      "recommendations_merge_allowlist_rules": null,
+      "reranker_transformations_search": null,
+      "use_ces_blending": null,
+      "refined_tag_rules": null,
+      "reranker_transformations_browse": "rpv_variations_base_price_browse"
+    },
+    "searchandized_items": {}
+  }
+}

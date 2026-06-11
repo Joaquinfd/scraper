@@ -1,0 +1,38 @@
+name: EAN backfill
+
+# Separado del scraper diario: el backfill es una tarea puntual/incremental
+# que recorre páginas de producto (1 request por producto pendiente).
+# - Manual (workflow_dispatch): para la carga inicial de los ~62k productos,
+#   correr varias veces con limit alto hasta vaciar los pendientes.
+# - Programado: tanda chica nocturna que cubre los productos nuevos del día.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Máximo de productos a procesar en esta corrida'
+        required: false
+        default: '10000'
+      workers:
+        description: 'Fetches en paralelo'
+        required: false
+        default: '4'
+  schedule:
+    - cron: '0 14 * * *'  # 11:00 AM Santiago, después del scraper diario
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: >
+          python -m jumbo_scraper.ean_backfill
+          --limit ${{ github.event.inputs.limit || '1000' }}
+          --workers ${{ github.event.inputs.workers || '4' }}
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

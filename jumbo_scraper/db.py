@@ -38,11 +38,42 @@ def _normalize_unit(raw: str | None) -> MeasurementUnit:
     return _UNIT_MAP.get(key, MeasurementUnit.UN)
 
 
+def _normalize_unit_or_none(raw: str | None) -> str | None:
+    key = (raw or "").strip().lower().rstrip(".")
+    unit = _UNIT_MAP.get(key)
+    return unit.value if unit else None
+
+
 def _type_name(row: dict) -> str:
+    """Tipo de producto: faceta 'Tipo de Producto' de Jumbo si existe
+    (taxonomía propia, ej. 'Cervezas Artesanales'), si no el último
+    segmento de la ruta de categoría como en v1."""
+    tipo = str(row.get("tipoDeProducto") or "").strip()
+    if tipo:
+        return tipo[:50]
     path = str(row.get("categoryPath") or "").strip()
     segments = [s.strip() for s in path.split(">")]
     name = segments[-1] if segments and segments[-1] else "Sin categoría"
     return name[:50]
+
+
+def _v2_fields(row: dict) -> dict:
+    """Campos v2 del producto a partir de una fila del parser."""
+    cart_limit = row.get("cartLimit")
+    multiplier_un = row.get("unitMultiplierUn")
+    return {
+        "measurement_unit_un": _normalize_unit_or_none(row.get("measurementUnitUn")),
+        "unit_multiplier_un": float(multiplier_un) if multiplier_un not in (None, "") else None,
+        "envase": (str(row.get("envase") or "").strip() or None),
+        "tipo_de_producto": (str(row.get("tipoDeProducto") or "").strip() or None),
+        "origen": (str(row.get("origen") or "").strip() or None),
+        "pais_de_origen": (str(row.get("paisDeOrigen") or "").strip() or None),
+        "id_grupo": (str(row.get("idGrupo") or "").strip() or None),
+        "id_subrubro": (str(row.get("idSubrubro") or "").strip() or None),
+        "category_path": (str(row.get("categoryPath") or "").strip()[:255] or None),
+        "ref_id": (str(row.get("refId") or "").strip() or None),
+        "cart_limit": int(cart_limit) if cart_limit not in (None, "") else None,
+    }
 
 
 def _build_engine():
@@ -130,7 +161,10 @@ class DbStorage:
         brand = str(row.get("brand") or "")[:40]
         unit_amount = float(row.get("unitMultiplier") or 1.0) or 1.0
         type_name = _type_name(row)
-        unit = _normalize_unit(row.get("measurementUnit"))
+        # La unidad real del contenido (measurementUnitUn) es mejor señal que
+        # measurementUnit, que en Jumbo es casi siempre 'un'.
+        unit = _normalize_unit(row.get("measurementUnitUn") or row.get("measurementUnit"))
+        v2 = _v2_fields(row)
 
         try:
             with self._session.begin_nested():
@@ -142,7 +176,8 @@ class DbStorage:
                     self._session.add(pt)
                     self._session.flush()
 
-                if self._session.get(Product, sku) is None:
+                existing = self._session.get(Product, sku)
+                if existing is None:
                     self._session.add(Product(
                         sku=sku,
                         name=name,
@@ -151,8 +186,19 @@ class DbStorage:
                         product_type_id=pt.id,
                         image_url=row.get("imageUrl") or None,
                         product_url=row.get("productUrl") or None,
+                        **v2,
                     ))
                     self._session.flush()
+                else:
+                    # Refresca los campos v2 (los 62k productos de v1 los
+                    # tienen en NULL) y re-asigna el tipo basado en faceta.
+                    existing.product_type_id = pt.id
+                    existing.product_url = row.get("productUrl") or existing.product_url
+                    existing.image_url = row.get("imageUrl") or existing.image_url
+                    for field, value in v2.items():
+                        if value is not None:
+                            setattr(existing, field, value)
+                    self._session.add(existing)
 
                 self._session.add(PriceSnapshot(
                     price=round(float(price_raw)),
