@@ -11,14 +11,17 @@ ALTER TABLE product ADD COLUMN IF NOT EXISTS ean_checked_at TIMESTAMPTZ;
 ALTER TABLE product ADD COLUMN IF NOT EXISTS measurement_unit_un VARCHAR(5);
 ALTER TABLE product ADD COLUMN IF NOT EXISTS unit_multiplier_un DOUBLE PRECISION;
 
--- Facetas Jumbo
-ALTER TABLE product ADD COLUMN IF NOT EXISTS envase VARCHAR(50);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS tipo_de_producto VARCHAR(100);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS origen VARCHAR(30);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS pais_de_origen VARCHAR(60);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS id_grupo VARCHAR(20);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS id_subrubro VARCHAR(20);
-ALTER TABLE product ADD COLUMN IF NOT EXISTS category_path VARCHAR(255);
+-- Columnas que NO se persisten (se eliminan si una migración previa las creó):
+--   tipo_de_producto / category_path: el tipo va por product_type_id (FK a producttype).
+--   id_grupo / id_subrubro: taxonomía interna de Jumbo, sin uso en la app.
+--   envase / origen / pais_de_origen: facetas Jumbo, sin uso en la app.
+ALTER TABLE product DROP COLUMN IF EXISTS tipo_de_producto;
+ALTER TABLE product DROP COLUMN IF EXISTS category_path;
+ALTER TABLE product DROP COLUMN IF EXISTS id_grupo;
+ALTER TABLE product DROP COLUMN IF EXISTS id_subrubro;
+ALTER TABLE product DROP COLUMN IF EXISTS envase;
+ALTER TABLE product DROP COLUMN IF EXISTS origen;
+ALTER TABLE product DROP COLUMN IF EXISTS pais_de_origen;
 
 -- ref_id de Jumbo: termina en '-PAK' cuando el SKU es un pack
 ALTER TABLE product ADD COLUMN IF NOT EXISTS ref_id VARCHAR(50);

@@ -7,7 +7,7 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from sqlmodel import Session, create_engine, select
+from sqlmodel import Session, SQLModel, create_engine, select
 
 from .models import MeasurementUnit, PriceSnapshot, Product, ProductType, Store
 
@@ -61,23 +61,19 @@ def _v2_fields(row: dict) -> dict:
     """Campos v2 del producto a partir de una fila del parser."""
     cart_limit = row.get("cartLimit")
     multiplier_un = row.get("unitMultiplierUn")
+    # Nota: tipoDeProducto y categoryPath NO se persisten — el tipo vive en
+    # producttype (product_type_id). Esas filas del parser se usan solo de forma
+    # transitoria en _type_name().
     return {
         "measurement_unit_un": _normalize_unit_or_none(row.get("measurementUnitUn")),
         "unit_multiplier_un": float(multiplier_un) if multiplier_un not in (None, "") else None,
-        "envase": (str(row.get("envase") or "").strip() or None),
-        "tipo_de_producto": (str(row.get("tipoDeProducto") or "").strip() or None),
-        "origen": (str(row.get("origen") or "").strip() or None),
-        "pais_de_origen": (str(row.get("paisDeOrigen") or "").strip() or None),
-        "id_grupo": (str(row.get("idGrupo") or "").strip() or None),
-        "id_subrubro": (str(row.get("idSubrubro") or "").strip() or None),
-        "category_path": (str(row.get("categoryPath") or "").strip()[:255] or None),
         "ref_id": (str(row.get("refId") or "").strip() or None),
         "cart_limit": int(cart_limit) if cart_limit not in (None, "") else None,
     }
 
 
-def _build_engine():
-    url = os.environ["DATABASE_URL"]
+def _build_engine(database_url: str | None = None):
+    url = database_url or os.environ["DATABASE_URL"]
     if url.startswith("postgres://") or (
         url.startswith("postgresql://") and not url.startswith("postgresql+psycopg://")
     ):
@@ -110,8 +106,14 @@ class DbStorage:
         store_company: str,
         store_location: str | None = None,
         output_dir: str = "output",
+        database_url: str | None = None,
+        create_tables: bool = False,
     ):
-        self.engine = _build_engine()
+        self.engine = _build_engine(database_url)
+        if create_tables:
+            # Conveniencia para DB local/dev: crea las tablas si no existen.
+            # En prod el dueño del esquema es la API (no se usa este flag).
+            SQLModel.metadata.create_all(self.engine)
         self.store_name = store_name
         self.store_company = store_company
         self.store_location = store_location

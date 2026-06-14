@@ -50,8 +50,19 @@ _GTIN_RE = re.compile(r'"gtin(?:1[34]|8)?"\s*:\s*"(\d{8,14})"')
 _thread_local = threading.local()
 
 
-def _build_engine():
-    url = os.environ["DATABASE_URL"]
+def _resolve_db_url(dev: bool) -> str:
+    """En --dev prefiere DEV_DATABASE_URL (cae a DATABASE_URL); si no, DATABASE_URL."""
+    if dev:
+        url = os.environ.get("DEV_DATABASE_URL") or os.environ.get("DATABASE_URL")
+    else:
+        url = os.environ.get("DATABASE_URL")
+    if not url:
+        raise RuntimeError("Falta DEV_DATABASE_URL o DATABASE_URL en el entorno/.env")
+    return url
+
+
+def _build_engine(database_url: str | None = None):
+    url = database_url or os.environ["DATABASE_URL"]
     if url.startswith("postgres://") or (
         url.startswith("postgresql://") and not url.startswith("postgresql+psycopg://")
     ):
@@ -106,9 +117,10 @@ def fetch_ean(config: Config, product_url: str) -> str | None:
     return m.group(1) if m else None
 
 
-def run_backfill(limit: int | None, workers: int, config: Config) -> tuple[int, int]:
+def run_backfill(limit: int | None, workers: int, config: Config,
+                 database_url: str | None = None) -> tuple[int, int]:
     """Procesa productos pendientes. Devuelve (encontrados, no_encontrados)."""
-    engine = _build_engine()
+    engine = _build_engine(database_url)
     found = 0
     not_found = 0
     processed = 0
@@ -167,6 +179,8 @@ def main(argv=None) -> int:
                     help="Máximo de productos a procesar en esta corrida (default: todos)")
     ap.add_argument("--workers", type=int, default=4,
                     help="Fetches de páginas en paralelo (default 4)")
+    ap.add_argument("--dev", action="store_true",
+                    help="Usa la DB local (DEV_DATABASE_URL, o DATABASE_URL si no existe)")
     ap.add_argument("--verbose", "-v", action="store_true")
     args = ap.parse_args(argv)
 
@@ -176,8 +190,13 @@ def main(argv=None) -> int:
         datefmt="%H:%M:%S",
     )
 
+    db_url = _resolve_db_url(args.dev)
+    if args.dev:
+        host = db_url.split("@", 1)[-1].split("/", 1)[0] if "@" in db_url else db_url
+        logger.warning("Modo --dev -> backfill sobre DB local @ %s", host)
+
     config = Config()
-    found, not_found = run_backfill(args.limit, args.workers, config)
+    found, not_found = run_backfill(args.limit, args.workers, config, database_url=db_url)
     print(f"\nEAN encontrados: {found}   sin EAN: {not_found}")
     return 0
 

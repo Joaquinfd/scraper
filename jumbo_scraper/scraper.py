@@ -7,7 +7,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import nullcontext
 from typing import List, Set
 
-from .categories import Category, fetch_category_tree, iter_leaf_categories
+from .categories import (
+    Category,
+    fetch_category_tree,
+    iter_leaf_categories,
+    iter_matched_leaves,
+)
 from .client import JumboClient
 from .config import Config
 from .parser import parse_product
@@ -27,8 +32,19 @@ class JumboScraper:
     def run(self) -> int:
         """Scrapea todo el catálogo. Devuelve el número de SKUs únicos procesados."""
         tree = fetch_category_tree(self.client, self.config)
-        leaves: List[Category] = list(iter_leaf_categories(tree))
-        logger.info("Categorías hoja a recorrer: %d", len(leaves))
+        if self.config.category_filter:
+            leaves = list(iter_matched_leaves(tree, self.config.category_filter))
+            logger.info(
+                "Filtro de categorías %s -> %d hojas: %s",
+                self.config.category_filter, len(leaves),
+                ", ".join(c.name for c in leaves),
+            )
+        else:
+            leaves = list(iter_leaf_categories(tree))
+            logger.info("Categorías hoja a recorrer: %d", len(leaves))
+
+        if self.config.max_products:
+            logger.info("Tope de productos para esta corrida: %d", self.config.max_products)
 
         if self.config.write_db:
             from .db import DbStorage  # lazy: sqlmodel/psycopg optional for CSV-only runs
@@ -37,6 +53,8 @@ class JumboScraper:
                 self.config.store_company,
                 self.config.store_location,
                 output_dir=self.config.output_dir,
+                database_url=self.config.db_url,
+                create_tables=self.config.db_create_tables,
             )
         else:
             db_cm = nullcontext(None)
@@ -58,10 +76,18 @@ class JumboScraper:
             return len(self.seen_product_ids)
 
     # ------------------------------------------------------------------ #
+    def _limit_reached(self) -> bool:
+        return (self.config.max_products is not None
+                and len(self.seen_product_ids) >= self.config.max_products)
+
     def _run_sequential(self, leaves: List[Category], file_storage: Storage, db) -> None:
         for i, cat in enumerate(leaves, 1):
+            if self._limit_reached():
+                break
             logger.info("[%d/%d] Categoría: %s (id=%s)", i, len(leaves), cat.name, cat.id)
             for product in iter_category_products(self.client, self.config, cat):
+                if self._limit_reached():
+                    break
                 self._handle_product(product, file_storage, db)
 
     def _run_parallel(self, leaves: List[Category], file_storage: Storage, db) -> None:
