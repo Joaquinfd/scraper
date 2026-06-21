@@ -1,0 +1,43 @@
+name: EAN retry missing
+
+# Re-intenta el EAN de TODOS los productos con ean NULL — incluidos los que ya
+# fueron revisados antes y fallaron (p. ej. por el "shell" intermitente de
+# jumbo.cl, ya mitigado con reintentos en fetch_ean).
+#
+# A diferencia del backfill normal (que solo toma ean_checked_at IS NULL), este
+# ignora ese marcador y vuelve a consultar la página. Manual: correr tras mejorar
+# la lógica de fetch_ean para recuperar EAN que antes no se obtuvieron.
+#
+# Nota: re-consulta también los productos que genuinamente no tienen código (no
+# hay nada que recuperar en esos), así que conviene usarlo de forma puntual, no
+# en un cron frecuente.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Máximo de productos a procesar en esta corrida'
+        required: false
+        default: '10000'
+      workers:
+        description: 'Fetches en paralelo'
+        required: false
+        default: '4'
+
+jobs:
+  retry-missing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: >
+          python -m jumbo_scraper.ean_backfill
+          --retry-missing
+          --limit ${{ github.event.inputs.limit || '10000' }}
+          --workers ${{ github.event.inputs.workers || '4' }}
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
