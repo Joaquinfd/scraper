@@ -46,6 +46,16 @@ _JSONLD_RE = re.compile(
     r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL
 )
 _GTIN_RE = re.compile(r'"gtin(?:1[34]|8)?"\s*:\s*"(\d{8,14})"')
+_EAN_RE = re.compile(r'"ean"\s*:\s*"(\d{8,14})"')
+
+# jumbo.cl a veces devuelve un HTML "shell" (~8 KB, sin JSON-LD) en lugar de la
+# página completa (~25-68 KB). Es intermitente: al reintentar suele venir completa.
+_SHELL_MAX_BYTES = 15000
+_EAN_RETRIES = 3
+
+_PAGE_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
 _thread_local = threading.local()
 
@@ -83,23 +93,8 @@ def _session_for_thread(config: Config) -> requests.Session:
     return s
 
 
-def fetch_ean(config: Config, product_url: str) -> str | None:
-    """Devuelve el EAN de la página de producto, o None si no está.
-
-    Pausa aleatoria por hilo antes de cada request para repartir la carga.
-    """
-    time.sleep(random.uniform(config.min_delay, config.max_delay))
-    session = _session_for_thread(config)
-    try:
-        resp = session.get(product_url, timeout=config.request_timeout)
-        resp.raise_for_status()
-    except requests.RequestException as exc:
-        logger.debug("Fetch falló %s: %s", product_url, exc)
-        return None
-
-    html = resp.text
-
-    # Primero JSON-LD bien parseado; si falla, regex directo sobre el HTML.
+def _extract_ean(html: str) -> str | None:
+    """EAN desde el JSON-LD (@graph .gtin*) y, de fallback, por regex (gtin/ean)."""
     for block in _JSONLD_RE.findall(html):
         try:
             obj = json.loads(block.strip())
@@ -112,51 +107,89 @@ def fetch_ean(config: Config, product_url: str) -> str | None:
                     or item.get("gtin8") or item.get("gtin14"))
             if gtin:
                 return str(gtin)
-
-    m = _GTIN_RE.search(html)
+    m = _GTIN_RE.search(html) or _EAN_RE.search(html)
     return m.group(1) if m else None
 
 
+def fetch_ean(config: Config, product_url: str) -> str | None:
+    """Devuelve el EAN de la página de producto, o None si no está.
+
+    Reintenta cuando la página vuelve como 'shell' intermitente (HTML chico sin
+    JSON-LD), que es la causa principal de EAN faltantes. Si la página es completa
+    pero no trae código, no reintenta (no hay EAN que recuperar).
+    Pausa aleatoria por hilo antes de cada request para repartir la carga.
+    """
+    session = _session_for_thread(config)
+    for attempt in range(_EAN_RETRIES + 1):
+        time.sleep(random.uniform(config.min_delay, config.max_delay))
+        try:
+            resp = session.get(product_url, timeout=config.request_timeout,
+                               headers=_PAGE_HEADERS)
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            logger.debug("Fetch falló %s: %s", product_url, exc)
+            if attempt < _EAN_RETRIES:
+                continue
+            return None
+
+        html = resp.text
+        ean = _extract_ean(html)
+        if ean:
+            return ean
+        # Sin EAN: si parece shell, reintenta; si la página es completa, no hay EAN.
+        if len(html) >= _SHELL_MAX_BYTES or attempt == _EAN_RETRIES:
+            return None
+    return None
+
+
+def _pending_conditions(retry_missing: bool):
+    """Filtros de productos a procesar.
+
+    - normal:        ean IS NULL AND ean_checked_at IS NULL  (nunca revisados)
+    - retry_missing: ean IS NULL                             (todos sin EAN, aunque
+                     ya se hayan revisado — re-intenta los que fallaron antes)
+    """
+    conds = [Product.ean.is_(None), Product.product_url.is_not(None)]
+    if not retry_missing:
+        conds.append(Product.ean_checked_at.is_(None))
+    return conds
+
+
 def run_backfill(limit: int | None, workers: int, config: Config,
-                 database_url: str | None = None) -> tuple[int, int]:
-    """Procesa productos pendientes. Devuelve (encontrados, no_encontrados)."""
+                 database_url: str | None = None,
+                 retry_missing: bool = False) -> tuple[int, int]:
+    """Procesa productos sin EAN. Devuelve (encontrados, no_encontrados).
+
+    Carga la lista de SKUs pendientes UNA vez y la recorre en lotes fijos, así
+    re-procesar los 'no encontrados' (retry_missing) no los re-selecciona.
+    """
     engine = _build_engine(database_url)
     found = 0
     not_found = 0
-    processed = 0
 
     with Session(engine) as db:
-        pending_total = len(db.exec(
-            select(Product.sku)
-            .where(Product.ean.is_(None))
-            .where(Product.ean_checked_at.is_(None))
-            .where(Product.product_url.is_not(None))
-        ).all())
-    target = min(pending_total, limit) if limit else pending_total
-    logger.info("Pendientes de EAN: %d — esta corrida procesará %d (workers=%d)",
-                pending_total, target, workers)
+        stmt = select(Product.sku).where(*_pending_conditions(retry_missing))
+        if limit:
+            stmt = stmt.limit(limit)
+        pending_skus = list(db.exec(stmt).all())
+
+    target = len(pending_skus)
+    logger.info("Productos a procesar: %d (retry_missing=%s, workers=%d)",
+                target, retry_missing, workers)
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        while processed < target:
-            batch_size = min(_BATCH_SIZE, target - processed)
+        for start in range(0, target, _BATCH_SIZE):
+            chunk = pending_skus[start:start + _BATCH_SIZE]
             with Session(engine) as db:
-                batch = db.exec(
-                    select(Product)
-                    .where(Product.ean.is_(None))
-                    .where(Product.ean_checked_at.is_(None))
-                    .where(Product.product_url.is_not(None))
-                    .limit(batch_size)
+                products = db.exec(
+                    select(Product).where(Product.sku.in_(chunk))
                 ).all()
 
-                if not batch:
-                    break
-
-                eans = list(pool.map(
-                    lambda p: fetch_ean(config, p.product_url), batch
-                ))
+                urls = [p.product_url for p in products]
+                eans = list(pool.map(lambda u: fetch_ean(config, u), urls))
 
                 now = datetime.now(timezone.utc)
-                for product, ean in zip(batch, eans):
+                for product, ean in zip(products, eans):
                     product.ean = ean
                     product.ean_checked_at = now
                     db.add(product)
@@ -166,9 +199,8 @@ def run_backfill(limit: int | None, workers: int, config: Config,
                         not_found += 1
                 db.commit()
 
-            processed += len(batch)
             logger.info("Progreso: %d/%d  (con EAN: %d, sin EAN: %d)",
-                        processed, target, found, not_found)
+                        min(start + _BATCH_SIZE, target), target, found, not_found)
 
     return found, not_found
 
@@ -181,6 +213,9 @@ def main(argv=None) -> int:
                     help="Fetches de páginas en paralelo (default 4)")
     ap.add_argument("--dev", action="store_true",
                     help="Usa la DB local (DEV_DATABASE_URL, o DATABASE_URL si no existe)")
+    ap.add_argument("--retry-missing", action="store_true",
+                    help="Re-procesa TODOS los productos con ean NULL (aunque ya se "
+                         "hayan revisado), para recuperar los que fallaron antes")
     ap.add_argument("--verbose", "-v", action="store_true")
     args = ap.parse_args(argv)
 
@@ -196,7 +231,8 @@ def main(argv=None) -> int:
         logger.warning("Modo --dev -> backfill sobre DB local @ %s", host)
 
     config = Config()
-    found, not_found = run_backfill(args.limit, args.workers, config, database_url=db_url)
+    found, not_found = run_backfill(args.limit, args.workers, config,
+                                    database_url=db_url, retry_missing=args.retry_missing)
     print(f"\nEAN encontrados: {found}   sin EAN: {not_found}")
     return 0
 

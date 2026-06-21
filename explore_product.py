@@ -117,32 +117,23 @@ def _get(session: requests.Session, url: str,
 
 # ── EAN fetcher (product page JSON-LD) ────────────────────────────────────────
 
-def fetch_ean(session: requests.Session, product_url: str) -> str:
-    """
-    Fetch the product page and extract the EAN barcode from the JSON-LD @graph.
+_PAGE_JSONLD_RE = re.compile(
+    r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL)
+_PAGE_GTIN_RE = re.compile(r'"gtin(?:1[34]|8)?"\s*:\s*"(\d{8,14})"')
+_PAGE_EAN_RE = re.compile(r'"ean"\s*:\s*"(\d{8,14})"')
 
-    VTEX product pages embed a <script type="application/ld+json"> block whose
-    @graph contains a Product node with "gtin": "7802107000937".
+# jumbo.cl a veces devuelve un HTML "shell" (~8 KB, sin JSON-LD) en lugar de la
+# página completa (~25-68 KB). Es intermitente: al reintentar suele venir completa.
+_SHELL_MAX_BYTES = 15000
+_EAN_RETRIES = 3
+_PAGE_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
-    Falls back to a raw regex scan if the JSON-LD parse fails.
-    Returns "" when not found.
-    """
-    if not product_url:
-        return ""
-    _throttle()
-    try:
-        resp = session.get(product_url, timeout=REQUEST_TIMEOUT)
-        resp.raise_for_status()
-    except requests.RequestException:
-        return ""
 
-    html = resp.text
-
-    # Primary: parse JSON-LD @graph blocks
-    for block in re.findall(
-        r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>',
-        html, re.DOTALL
-    ):
+def _extract_ean(html: str) -> str:
+    """EAN desde el JSON-LD (@graph .gtin*) y, de fallback, por regex (gtin/ean)."""
+    for block in _PAGE_JSONLD_RE.findall(html):
         try:
             obj = json.loads(block.strip())
         except (json.JSONDecodeError, ValueError):
@@ -151,13 +142,42 @@ def fetch_ean(session: requests.Session, product_url: str) -> str:
             if not isinstance(item, dict):
                 continue
             gtin = (item.get("gtin") or item.get("gtin13")
-                    or item.get("gtin8") or item.get("gtin14") or "")
+                    or item.get("gtin8") or item.get("gtin14"))
             if gtin:
                 return str(gtin)
-
-    # Fallback: raw regex on the full HTML
-    m = re.search(r'"gtin(?:13)?"\s*:\s*"(\d{8,14})"', html)
+    m = _PAGE_GTIN_RE.search(html) or _PAGE_EAN_RE.search(html)
     return m.group(1) if m else ""
+
+
+def fetch_ean(session: requests.Session, product_url: str) -> str:
+    """
+    Fetch the product page and extract the EAN from the JSON-LD @graph.
+
+    Retries when the page comes back as the intermittent "shell" (small HTML with
+    no JSON-LD) — the main cause of missing EANs. If the page is full but carries
+    no code, it doesn't retry (nothing to recover). Returns "" when not found.
+    """
+    if not product_url:
+        return ""
+    for attempt in range(_EAN_RETRIES + 1):
+        _throttle()
+        try:
+            resp = session.get(product_url, timeout=REQUEST_TIMEOUT,
+                               headers=_PAGE_HEADERS)
+            resp.raise_for_status()
+        except requests.RequestException:
+            if attempt < _EAN_RETRIES:
+                continue
+            return ""
+
+        html = resp.text
+        ean = _extract_ean(html)
+        if ean:
+            return ean
+        # No EAN: if it looks like a shell, retry; if the page is full, there's none.
+        if len(html) >= _SHELL_MAX_BYTES or attempt == _EAN_RETRIES:
+            return ""
+    return ""
 
 
 # ── Field helpers ──────────────────────────────────────────────────────────────
@@ -409,7 +429,8 @@ def _collect_leaf_groups(groups: list, out: list | None = None) -> list:
     return out
 
 
-def bulk_collect(session: requests.Session, limit: int, out_path: Path) -> None:
+def bulk_collect(session: requests.Session, limit: int, out_path: Path,
+                 fetch_ean_flag: bool = False) -> None:
     EXPLORATION_DIR.mkdir(exist_ok=True)
 
     # -- 1. Groups ---------------------------------------------------------
@@ -481,7 +502,10 @@ def bulk_collect(session: requests.Session, limit: int, out_path: Path) -> None:
                     seen_ids.add(pid)
                     cat_new += 1
                     total_rows += 1
-                    writer.writerow(_flatten_product(product))
+                    row = _flatten_product(product)
+                    if fetch_ean_flag:
+                        row["ean"] = fetch_ean(session, row.get("productUrl", ""))
+                    writer.writerow(row)
 
                 print(
                     f"  [{cat_idx+1:3d}/{len(leaves)}] {cat_name[:36]:36s} | "
@@ -668,7 +692,7 @@ def main() -> None:
             ts  = datetime.now().strftime("%Y%m%d_%H%M%S")
             out = (Path(args.output) if args.output
                    else EXPLORATION_DIR / f"products_detail_{ts}.csv")
-            bulk_collect(session, args.limit, out)
+            bulk_collect(session, args.limit, out, fetch_ean_flag=args.fetch_ean)
 
         elif args.brand:
             ts  = datetime.now().strftime("%Y%m%d_%H%M%S")
