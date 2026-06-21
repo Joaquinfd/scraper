@@ -7,7 +7,7 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from sqlmodel import Session, create_engine, select
+from sqlmodel import Session, SQLModel, create_engine, select
 
 from .models import MeasurementUnit, PriceSnapshot, Product, ProductType, Store
 
@@ -38,15 +38,42 @@ def _normalize_unit(raw: str | None) -> MeasurementUnit:
     return _UNIT_MAP.get(key, MeasurementUnit.UN)
 
 
+def _normalize_unit_or_none(raw: str | None) -> str | None:
+    key = (raw or "").strip().lower().rstrip(".")
+    unit = _UNIT_MAP.get(key)
+    return unit.value if unit else None
+
+
 def _type_name(row: dict) -> str:
+    """Tipo de producto: faceta 'Tipo de Producto' de Jumbo si existe
+    (taxonomía propia, ej. 'Cervezas Artesanales'), si no el último
+    segmento de la ruta de categoría como en v1."""
+    tipo = str(row.get("tipoDeProducto") or "").strip()
+    if tipo:
+        return tipo[:50]
     path = str(row.get("categoryPath") or "").strip()
     segments = [s.strip() for s in path.split(">")]
     name = segments[-1] if segments and segments[-1] else "Sin categoría"
     return name[:50]
 
 
-def _build_engine():
-    url = os.environ["DATABASE_URL"]
+def _v2_fields(row: dict) -> dict:
+    """Campos v2 del producto a partir de una fila del parser."""
+    cart_limit = row.get("cartLimit")
+    multiplier_un = row.get("unitMultiplierUn")
+    # Nota: tipoDeProducto y categoryPath NO se persisten — el tipo vive en
+    # producttype (product_type_id). Esas filas del parser se usan solo de forma
+    # transitoria en _type_name().
+    return {
+        "measurement_unit_un": _normalize_unit_or_none(row.get("measurementUnitUn")),
+        "unit_multiplier_un": float(multiplier_un) if multiplier_un not in (None, "") else None,
+        "ref_id": (str(row.get("refId") or "").strip() or None),
+        "cart_limit": int(cart_limit) if cart_limit not in (None, "") else None,
+    }
+
+
+def _build_engine(database_url: str | None = None):
+    url = database_url or os.environ["DATABASE_URL"]
     if url.startswith("postgres://") or (
         url.startswith("postgresql://") and not url.startswith("postgresql+psycopg://")
     ):
@@ -79,8 +106,14 @@ class DbStorage:
         store_company: str,
         store_location: str | None = None,
         output_dir: str = "output",
+        database_url: str | None = None,
+        create_tables: bool = False,
     ):
-        self.engine = _build_engine()
+        self.engine = _build_engine(database_url)
+        if create_tables:
+            # Conveniencia para DB local/dev: crea las tablas si no existen.
+            # En prod el dueño del esquema es la API (no se usa este flag).
+            SQLModel.metadata.create_all(self.engine)
         self.store_name = store_name
         self.store_company = store_company
         self.store_location = store_location
@@ -130,7 +163,10 @@ class DbStorage:
         brand = str(row.get("brand") or "")[:40]
         unit_amount = float(row.get("unitMultiplier") or 1.0) or 1.0
         type_name = _type_name(row)
-        unit = _normalize_unit(row.get("measurementUnit"))
+        # La unidad real del contenido (measurementUnitUn) es mejor señal que
+        # measurementUnit, que en Jumbo es casi siempre 'un'.
+        unit = _normalize_unit(row.get("measurementUnitUn") or row.get("measurementUnit"))
+        v2 = _v2_fields(row)
 
         try:
             with self._session.begin_nested():
@@ -142,7 +178,8 @@ class DbStorage:
                     self._session.add(pt)
                     self._session.flush()
 
-                if self._session.get(Product, sku) is None:
+                existing = self._session.get(Product, sku)
+                if existing is None:
                     self._session.add(Product(
                         sku=sku,
                         name=name,
@@ -151,8 +188,19 @@ class DbStorage:
                         product_type_id=pt.id,
                         image_url=row.get("imageUrl") or None,
                         product_url=row.get("productUrl") or None,
+                        **v2,
                     ))
                     self._session.flush()
+                else:
+                    # Refresca los campos v2 (los 62k productos de v1 los
+                    # tienen en NULL) y re-asigna el tipo basado en faceta.
+                    existing.product_type_id = pt.id
+                    existing.product_url = row.get("productUrl") or existing.product_url
+                    existing.image_url = row.get("imageUrl") or existing.image_url
+                    for field, value in v2.items():
+                        if value is not None:
+                            setattr(existing, field, value)
+                    self._session.add(existing)
 
                 self._session.add(PriceSnapshot(
                     price=round(float(price_raw)),

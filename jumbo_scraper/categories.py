@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import logging
+import unicodedata
 from dataclasses import dataclass, field
-from typing import List
+from typing import Iterator, List
 
 from .client import JumboClient
 from .config import Config
@@ -62,3 +63,37 @@ def flatten_all_categories(tree: List[Category]):
         yield cat
         if cat.children:
             yield from flatten_all_categories(cat.children)
+
+
+def _normalize(text: str) -> str:
+    """minúsculas y sin acentos, para comparar nombres de categoría."""
+    nfkd = unicodedata.normalize("NFKD", text or "")
+    return "".join(c for c in nfkd if not unicodedata.combining(c)).lower()
+
+
+def _leaves_under(nodes: List[Category], term: str, under_match: bool) -> Iterator[Category]:
+    """Hojas que cuelgan de un nodo cuyo nombre contiene `term` (ya normalizado)."""
+    for node in nodes:
+        here = under_match or (term in _normalize(node.name))
+        if node.is_leaf:
+            if here:
+                yield node
+        else:
+            yield from _leaves_under(node.children, term, here)
+
+
+def iter_matched_leaves(tree: List[Category], terms: List[str]) -> Iterator[Category]:
+    """Hojas que pertenecen a alguna categoría que matchea uno de `terms`.
+
+    Si un nodo intermedio matchea (p. ej. 'Despensa'), se incluyen todas sus
+    hojas. Si una hoja matchea directamente (p. ej. 'Cervezas'), se incluye ella.
+    Se recorre término por término (en orden) y se deduplica por id, de modo que
+    el orden de `terms` determina qué categorías se priorizan al aplicar un tope.
+    """
+    seen: set[str] = set()
+    for term in terms:
+        nt = _normalize(term)
+        for leaf in _leaves_under(tree, nt, under_match=False):
+            if leaf.id not in seen:
+                seen.add(leaf.id)
+                yield leaf

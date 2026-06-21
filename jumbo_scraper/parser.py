@@ -59,6 +59,27 @@ def _seller_name(product: dict) -> str:
     return str(seller)
 
 
+def _spec_first(product: dict, key: str) -> str:
+    """Facetas Jumbo vienen como lista de un elemento: ['Lata'] -> 'Lata'."""
+    val = product.get(key)
+    if isinstance(val, list):
+        return str(val[0]).strip() if val and str(val[0]).strip() else ""
+    return str(val).strip() if val else ""
+
+
+def _sku_data(product: dict) -> dict:
+    """Decodifica SkuData (JSON anidado por skuId) y devuelve el dict del SKU.
+
+    Contiene los campos de contenido real que no están al nivel superior:
+    measurement_unit_un ('lt', 'kg', 'un') y unit_multiplier_un (total en
+    esa unidad: una lata de 470 cc -> 0.47; un pack 24x330 cc -> 7.92).
+    """
+    sku_id = str(product.get("id", ""))
+    raw_map = _decode_json_field(product, "SkuData")
+    inner = raw_map.get(sku_id, {})
+    return inner if isinstance(inner, dict) else {}
+
+
 def parse_product(product: dict, scraped_at: str | None = None) -> List[Dict]:
     """Convierte un resultado de Constructor.io en una fila.
 
@@ -68,12 +89,25 @@ def parse_product(product: dict, scraped_at: str | None = None) -> List[Dict]:
     scraped_at = scraped_at or datetime.now(timezone.utc).isoformat()
 
     pd = _decode_json_field(product, "ProductData")
+    sd = _sku_data(product)
 
     measurement_unit = (
-        pd.get("measurement_unit")
+        sd.get("measurement_unit")
+        or pd.get("measurement_unit")
         or product.get("MeasurementUnit", "")
     )
-    unit_multiplier = pd.get("unit_multiplier") or product.get("UnitMultiplier")
+    unit_multiplier = (
+        sd.get("unit_multiplier")
+        or pd.get("unit_multiplier")
+        or product.get("UnitMultiplier")
+    )
+    measurement_unit_un = sd.get("measurement_unit_un") or pd.get("measurement_unit_un") or ""
+    unit_multiplier_un = sd.get("unit_multiplier_un") or pd.get("unit_multiplier_un")
+    cart_limit_raw = sd.get("cart_limit") or pd.get("cart_limit")
+    try:
+        cart_limit = int(cart_limit_raw) if cart_limit_raw not in (None, "") else None
+    except (TypeError, ValueError):
+        cart_limit = None
 
     row: Dict = {
         "productId":            product.get("ProductId") or product.get("productId"),
@@ -90,6 +124,11 @@ def parse_product(product: dict, scraped_at: str | None = None) -> List[Dict]:
         "refId":                product.get("RefId", ""),
         "measurementUnit":      measurement_unit,
         "unitMultiplier":       unit_multiplier,
+        "measurementUnitUn":    measurement_unit_un,
+        "unitMultiplierUn":     unit_multiplier_un,
+        "cartLimit":            cart_limit,
+        # transitorio: solo para nombrar el ProductType en db._type_name (no se persiste)
+        "tipoDeProducto":       _spec_first(product, "Tipo de Producto"),
         "price":                product.get("price") or product.get("sellingPrice"),
         "listPrice":            product.get("listPrice"),
         "priceWithoutDiscount": product.get("originalPrice"),
@@ -115,6 +154,8 @@ def parse_products(products: List[dict]) -> Iterator[Dict]:
 CSV_FIELDS = [
     "productId", "productName", "brand", "brandId", "categoryPath",
     "skuId", "skuName", "ean", "refId", "measurementUnit", "unitMultiplier",
+    "measurementUnitUn", "unitMultiplierUn", "cartLimit",
+    "tipoDeProducto",
     "price", "listPrice", "priceWithoutDiscount",
     "available", "availableQuantity",
     "sellerId", "sellerName", "imageUrl", "productUrl", "linkText", "scrapedAt",

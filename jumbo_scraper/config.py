@@ -37,6 +37,12 @@ class Config:
     store_name: str = "Jumbo Online"
     store_company: str = "Jumbo"
     store_location: str | None = None
+    db_url: str | None = None              # override de DATABASE_URL (dev usa DEV_DATABASE_URL)
+    db_create_tables: bool = False         # crea tablas si faltan (solo dev/local)
+
+    # --- Modo dev / corrida acotada ---
+    category_filter: list[str] | None = None  # substrings de categoría a incluir (None = todo)
+    max_products: int | None = None           # corta tras N SKUs únicos (None = sin límite)
 
     @property
     def browse_url(self) -> str:
